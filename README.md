@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# NeoScratch Tech Platform
 
-## Project info
+**NeoScratch** is a Rwanda-based software development, graphic design, and networking solutions company. This repository contains the source code for the official NeoScratch web platform, built with modern frontend technologies to ensure a fast, reliable, and premium user experience.
 
-**URL**: https://lovable.dev/projects/b97c8749-8e18-429b-bc99-5b832f6b98c6
+![NeoScratch](/public/neoscratch.png)
 
-## How can I edit this code?
+## 🚀 Tech Stack
 
-There are several ways of editing your application.
+- **Framework**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [Radix UI](https://www.radix-ui.com/) (shadcn/ui)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [React Router DOM](https://reactrouter.com/)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b97c8749-8e18-429b-bc99-5b832f6b98c6) and start prompting.
+## 🛠️ Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+Ensure you have the following installed on your local machine:
+- **Node.js**: `v18.0.0` or higher
+- **npm** or **yarn** or **pnpm** (npm is recommended)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/neoscratch.git
+   cd neoscratch
+   ```
 
-Follow these steps:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Set up Environment Variables**:
+   Create a `.env` file in the root directory and configure it mapping any necessary keys.
+   *(Note: `.env` is intentionally ignored by git to protect sensitive keys)*
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   ```bash
+   touch .env
+   # Add your specific variables inside .env
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   The application will be running locally at `http://localhost:5173`. 
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+
+---
+
+## 📁 Project Structure
+
+```text
+├── public/              # Static assets (images, logos, robots.txt)
+├── src/
+│   ├── assets/          # Project specific images/icons
+│   ├── components/      # Reusable React components (UI library, Layouts)
+│   ├── contexts/        # React Context providers (ThemeContext)
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility library functions and third-party setups
+│   ├── pages/           # Application views (Home, About, Projects, etc)
+│   ├── index.css        # Global stylesheet and Tailwind Base (Apple-style theme)
+│   ├── App.tsx          # Main application routing tree
+│   └── main.tsx         # Entry point
+├── tailwind.config.ts   # Tailwind configuration
+└── vite.config.ts       # Vite bundler configuration
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Theme & Styling
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The project features a **custom premium UI design** mimicking modern Apple-like aesthetics with bright orange/peach gradients.
+- **index.css**: Contains all the global CSS variables and specific keyframe animations mimicking `cubic-bezier(0.16, 1, 0.3, 1)` easing.
+- **Tailwind**: Used heavily across the components. Avoid writing raw CSS where Tailwind utility classes suffice.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+This application is fully static and can be deployed easily to any static hosting provider.
 
-This project is built with:
+**Build the application:**
+```bash
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This will compile and optimize the files into the `dist` folder. You can deploy this folder directly to platforms like:
+- **Vercel**
+- **Netlify**
+- **Cloudflare Pages**
+- **Firebase Hosting**
 
-## How can I deploy this project?
+## 🤝 Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/b97c8749-8e18-429b-bc99-5b832f6b98c6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+When contributing to this repository:
+1. Ensure all new components are styled cleanly and fit within the aesthetic of `NeoScratch`.
+2. Do not commit API keys or sensitive data. Always use the `.env` approach.
+3. Make sure to run `npm run lint` and `npm run build` locally before pushing to verify no typescript or format errors were introduced.
