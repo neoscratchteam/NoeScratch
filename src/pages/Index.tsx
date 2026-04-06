@@ -76,7 +76,6 @@ const Index = () => {
       const total = rect.height - windowHeight;
       
       if (start <= 0 && end >= 0) {
-        // Direct mapping
         setScrollProgress(Math.abs(start) / total);
       } else if (start > 0) {
         setScrollProgress(0);
@@ -256,7 +255,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAST Horizontal Scroll Projects Section - Full Image Fill & Direct Sync */}
+      {/* Horizontal Scroll Projects Section */}
       <div ref={ghostRef} className="relative h-[300vh]">
         <section className="sticky top-0 h-screen overflow-hidden bg-background py-20 flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-10 flex justify-between items-end">
@@ -278,7 +277,7 @@ const Index = () => {
             {projects.map((p) => (
               <div 
                 key={p.id}
-                className="w-[80vw] flex-shrink-0 h-[55vh] min-h-[400px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-shadow duration-300"
+                className="w-[80vw] flex-shrink-0 h-[55vh] min-h-[400px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-all duration-300 hover:ring-2 hover:ring-primary/40"
               >
                 {/* Image Section - FULL FILL */}
                 <div className="lg:w-[60%] h-[50%] lg:h-full bg-secondary overflow-hidden relative">
@@ -287,11 +286,10 @@ const Index = () => {
                     alt={p.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* Subtle Overlay to make it feel expensive */}
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
                 
-                {/* Content Section - Balanced Sidebar */}
+                {/* Content Section */}
                 <div className="lg:w-[40%] h-[50%] lg:h-full p-10 lg:p-14 flex flex-col justify-center bg-white relative z-10">
                   <div className="flex items-center space-x-3 mb-6">
                     <span className="text-[11px] font-bold text-muted-foreground/40">{p.year}</span>
