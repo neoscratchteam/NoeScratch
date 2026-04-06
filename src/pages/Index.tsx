@@ -26,11 +26,11 @@ const Index = () => {
         {/* Sharp Small Square Grid Background */}
         <div className="absolute inset-0 z-0 bg-grid opacity-60 pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16 lg:pt-24 pb-12 lg:pb-16 flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16 lg:pt-24 flex flex-col justify-center">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Content */}
-            <div className="lg:col-span-7 animate-fade-in text-white space-y-6">
+            <div className="lg:col-span-7 animate-fade-in text-white space-y-6 pb-16">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-medium animate-slide-up">
                 <span>Software Development & Digital Marketing Studio — Kigali, Rwanda</span>
               </div>
@@ -49,7 +49,7 @@ const Index = () => {
                     See What We Do
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-xl px-10 border-white/30 text-white hover:bg-white/10 transition-all font-bold" asChild>
+                <Button size="lg" className="bg-white/20 border-white/30 backdrop-blur-md text-white hover:bg-white/30 rounded-xl px-10 transition-all font-bold" asChild>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -60,34 +60,33 @@ const Index = () => {
                   <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{projectsCount.count}</div>
                   <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Projects delivered</p>
                 </div>
-                <div ref={experienceCount.elementRef}>
+                <div ref={experienceCount.elementRef} className="border-l border-white/10 pl-4">
                   <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{experienceCount.count}</div>
                   <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Years in business</p>
                 </div>
-                <div ref={clientsCount.elementRef}>
+                <div ref={clientsCount.elementRef} className="border-l border-white/10 pl-4">
                   <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{clientsCount.count}</div>
                   <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Happy clients</p>
                 </div>
-                <div ref={retentionCount.elementRef}>
+                <div ref={retentionCount.elementRef} className="border-l border-white/10 pl-4">
                   <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{retentionCount.count}</div>
                   <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Client retention</p>
                 </div>
               </div>
             </div>
 
-            {/* Right Content - Mockup (Peeking from Edge) */}
-            <div className="lg:col-span-5 relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <div className="relative -mr-48 translate-x-12 translate-y-8">
-                <div className="bg-card rounded-2xl shadow-3xl overflow-hidden border border-white/10 transform rotate-1 hover:rotate-0 transition-all duration-1000">
+            {/* Right Content - Mockup (Merged to Bottom) */}
+            <div className="lg:col-span-5 relative hidden lg:block self-end animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="relative translate-x-12 translate-y-[2px]">
+                <div className="bg-white shadow-2xl border-l border-t border-white/10 transition-all duration-1000">
                   <img 
                     src={heroDashboard} 
                     alt="Professional Dashboard Mockup" 
-                    className="w-full h-auto opacity-95 grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-auto grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </section>
