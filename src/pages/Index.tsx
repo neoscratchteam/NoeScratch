@@ -24,7 +24,7 @@ const Index = () => {
       {/* Full-Height Professional Hero Section */}
       <section className="relative h-screen min-h-[700px] overflow-hidden bg-primary flex items-center">
         {/* Sharp Square Grid Background */}
-        <div className="absolute inset-0 z-0 bg-grid opacity-20 pointer-events-none" />
+        <div className="absolute inset-0 z-0 bg-grid opacity-40 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16 lg:pt-24 pb-12 lg:pb-16 flex flex-col justify-center">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
