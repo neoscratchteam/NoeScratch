@@ -55,18 +55,18 @@ const projects = [
 ];
 
 const Index = () => {
-  // Counter animations for stats
   const projectsCount = useCountUpAnimation({ end: 30, suffix: '+' });
   const experienceCount = useCountUpAnimation({ end: 2, suffix: '+' });
   const clientsCount = useCountUpAnimation({ end: 20, suffix: '+' });
   const retentionCount = useCountUpAnimation({ end: 100, suffix: '%' });
 
-  // Fast, Direct Horizontal Scroll Logic
   const ghostRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let requestRef: number;
+
+    const updateScroll = () => {
       if (!ghostRef.current) return;
       const rect = ghostRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
@@ -75,21 +75,23 @@ const Index = () => {
       const end = rect.bottom - windowHeight;
       const total = rect.height - windowHeight;
       
+      let nextProgress = 0;
       if (start <= 0 && end >= 0) {
-        setScrollProgress(Math.abs(start) / total);
-      } else if (start > 0) {
-        setScrollProgress(0);
+        nextProgress = Math.abs(start) / total;
       } else if (end < 0) {
-        setScrollProgress(1);
+        nextProgress = 1;
       }
+      
+      setScrollProgress(nextProgress);
+      requestRef = requestAnimationFrame(updateScroll);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    requestRef = requestAnimationFrame(updateScroll);
+    return () => cancelAnimationFrame(requestRef);
   }, []);
 
-  const cardWidth = 80; // vw
-  const gapWidth = 5;  // vw
+  const cardWidth = 85; 
+  const gapWidth = 5;  
   const translateX = -scrollProgress * (cardWidth + gapWidth) * (projects.length - 1);
 
   return (
@@ -255,60 +257,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Horizontal Scroll Projects Section */}
-      <div ref={ghostRef} className="relative h-[300vh]">
-        <section className="sticky top-0 h-screen overflow-hidden bg-background py-20 flex flex-col justify-center">
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-10 flex justify-between items-end">
+      {/* Horizontal Scroll Projects Section - Anti-Shake & High Precision */}
+      <div ref={ghostRef} className="relative h-[250vh]">
+        <section className="sticky top-0 h-screen overflow-hidden bg-background py-8 flex flex-col justify-center">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 flex justify-between items-end">
             <div>
-              <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-3 block">FEATURED WORK</span>
-              <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
+              <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-2 block">FEATURED WORK</span>
+              <h2 className="text-2xl lg:text-4xl font-bold text-foreground font-inter">
                 Platforms we've engineered.
               </h2>
             </div>
             <Button variant="outline" size="sm" className="rounded-xl border-primary/20 hover:bg-primary/5 text-primary font-bold text-xs" asChild>
-              <Link to="/projects">View all projects</Link>
+              <Link to="/projects">View all</Link>
             </Button>
           </div>
 
           <div 
-            className="flex gap-[5vw] px-[10vw] transition-transform duration-200 ease-out"
-            style={{ transform: `translateX(${translateX}vw)` }}
+            className="flex gap-[4vw] px-[7.5vw] will-change-transform transform-gpu"
+            style={{ 
+              transform: `translate3d(${translateX.toFixed(2)}vw, 0px, 0px)`,
+              // Removed transition-transform to eliminate conflict with rapid scroll updates (anti-shake)
+            }}
           >
             {projects.map((p) => (
               <div 
                 key={p.id}
-                className="w-[80vw] flex-shrink-0 h-[55vh] min-h-[400px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-all duration-300 hover:ring-2 hover:ring-primary/40"
+                className="w-[85vw] flex-shrink-0 h-[40vh] min-h-[320px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-all duration-300 hover:ring-2 hover:ring-primary/40"
               >
                 {/* Image Section - FULL FILL */}
-                <div className="lg:w-[60%] h-[50%] lg:h-full bg-secondary overflow-hidden relative">
+                <div className="lg:w-[65%] h-[50%] lg:h-full bg-secondary overflow-hidden relative">
                   <img 
                     src={p.image} 
                     alt={p.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"
                   />
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute top-4 left-4 flex space-x-2">
+                    <span className="px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-primary text-[9px] font-bold tracking-wider shadow-sm">{p.tag}</span>
+                  </div>
                 </div>
                 
                 {/* Content Section */}
-                <div className="lg:w-[40%] h-[50%] lg:h-full p-10 lg:p-14 flex flex-col justify-center bg-white relative z-10">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <span className="text-[11px] font-bold text-muted-foreground/40">{p.year}</span>
-                    <span className="h-px w-6 bg-border"></span>
-                    <span className="text-primary text-[10px] font-bold tracking-widest uppercase">{p.tag}</span>
+                <div className="lg:w-[35%] h-[50%] lg:h-full p-6 lg:p-8 flex flex-col justify-center bg-white relative z-10 transition-colors duration-300 group-hover:bg-primary/[0.01]">
+                  <div className="flex items-center space-x-2 mb-4">
+                    <span className="text-[10px] font-bold text-muted-foreground/30">{p.year}</span>
+                    <span className="h-px w-4 bg-border"></span>
+                    <span className="text-primary text-[9px] font-extrabold tracking-widest uppercase">SYNERGY</span>
                   </div>
                   
-                  <h3 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">{p.title}</h3>
-                  <p className="text-muted-foreground text-sm font-semibold mb-6">for {p.subtitle.replace('for ', '')}</p>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2 leading-tight group-hover:text-primary transition-colors">{p.title}</h3>
+                  <p className="text-muted-foreground text-[11px] font-semibold mb-4 leading-none opacity-60 italic">for {p.subtitle.replace('for ', '')}</p>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-10 opacity-80 font-medium">
+                  <p className="text-muted-foreground text-[13px] leading-relaxed mb-6 opacity-80 font-medium line-clamp-3">
                     {p.description}
                   </p>
                   
                   <Link 
                     to={p.link}
-                    className="inline-flex items-center text-primary text-sm font-bold hover:gap-3 transition-all duration-300 group/link"
+                    className="inline-flex items-center text-primary text-xs font-bold hover:gap-2 transition-all duration-300 group/link"
                   >
-                    View project <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1" />
+                    Explore Case <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover/link:translate-x-1" />
                   </Link>
                 </div>
               </div>
