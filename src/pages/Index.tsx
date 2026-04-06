@@ -91,7 +91,6 @@ const Index = () => {
 
   const cardWidth = 85; 
   const gapWidth = 5;  
-  // Direct, fast mapping by applying the progress instantly to the transform
   const translateX = -scrollProgress * (cardWidth + gapWidth) * (projects.length - 1);
 
   return (
@@ -257,7 +256,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Horizontal Scroll Projects Section - HIGH SPEED SYNC */}
+      {/* Horizontal Scroll Projects Section - High Contrast Hover Focus */}
       <div ref={ghostRef} className="relative h-[180vh]">
         <section className="sticky top-0 h-screen overflow-hidden bg-background py-8 flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 flex justify-between items-end">
@@ -281,7 +280,7 @@ const Index = () => {
             {projects.map((p) => (
               <div 
                 key={p.id}
-                className="w-[85vw] flex-shrink-0 h-[40vh] min-h-[320px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-all duration-300 hover:ring-2 hover:ring-primary/40"
+                className="w-[85vw] flex-shrink-0 h-[40vh] min-h-[320px] bg-white rounded-3xl border border-border shadow-2xl overflow-hidden flex flex-col lg:flex-row group transition-all duration-300 hover:ring-2 hover:ring-primary"
               >
                 {/* Image Section - FULL FILL */}
                 <div className="lg:w-[65%] h-[50%] lg:h-full bg-secondary overflow-hidden relative">
@@ -297,7 +296,7 @@ const Index = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="lg:w-[35%] h-[50%] lg:h-full p-6 lg:p-8 flex flex-col justify-center bg-white relative z-10 transition-colors duration-300 group-hover:bg-primary/[0.01]">
+                <div className="lg:w-[35%] h-[50%] lg:h-full p-6 lg:p-8 flex flex-col justify-center bg-white relative z-10 transition-colors duration-300 group-hover:bg-primary/[0.02]">
                   <div className="flex items-center space-x-2 mb-4">
                     <span className="text-[10px] font-bold text-muted-foreground/30">{p.year}</span>
                     <span className="h-px w-4 bg-border"></span>
