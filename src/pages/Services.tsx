@@ -212,105 +212,102 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       
-      {/* 🚀 MODERN HERO SECTION - Matches Project Page */}
-      <section className="pt-32 pb-24 lg:pt-48 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
-        {/* Large Grid Overlay */}
-        <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest mb-6 animate-slide-up">
-            <span>Global Engineering Solutions</span>
+      {/* 🟢 NAVIGATION WRAPPER - Confines the Sticky Filter to the Results Section */}
+      <div className="relative">
+        {/* 🚀 MODERN HERO SECTION - Matches Project Page */}
+        <section className="pt-32 pb-24 lg:pt-48 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
+          {/* Large Grid Overlay */}
+          <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest mb-6 animate-slide-up">
+              <span>Global Engineering Solutions</span>
+            </div>
+            <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in max-w-4xl mx-auto">
+              Innovate with Precision. <br /> Scale with <span className="opacity-70 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20">NeoScratch.</span>
+            </h1>
+            <p className="text-sm lg:text-[15px] text-white/80 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up">
+              We provide world-class software engineering, strategic tech coaching, and digital design services tailored for businesses aiming for global impact.
+            </p>
           </div>
-          <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in max-w-4xl mx-auto">
-            Innovate with Precision. <br /> Scale with <span className="opacity-70 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20">NeoScratch.</span>
-          </h1>
-          <p className="text-sm lg:text-[15px] text-white/80 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up">
-            We provide world-class software engineering, strategic tech coaching, and digital design services tailored for businesses aiming for global impact.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* 🔍 FILTER BAR - Matches Project Page Experience */}
-      <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center overflow-x-auto pb-4 md:pb-0 hide-scrollbar">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleFilterChange(cat)}
-                className={`px-5 py-2 rounded-full text-[12px] whitespace-nowrap font-bold transition-all duration-300 ${
-                  filter === cat 
-                    ? 'bg-[#1a73e8] text-white shadow-lg shadow-blue-500/10' 
-                    : 'bg-[#f4f7fa] text-[#555] hover:bg-[#e8ebf0]'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+        {/* 🔍 FILTER BAR - Matches Project Page Experience */}
+        <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center overflow-x-auto pb-4 md:pb-0 hide-scrollbar">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => handleFilterChange(cat)}
+                  className={`px-5 py-2 rounded-full text-[12px] whitespace-nowrap font-bold transition-all duration-300 ${
+                    filter === cat 
+                      ? 'bg-[#1a73e8] text-white shadow-lg shadow-blue-500/10' 
+                      : 'bg-[#f4f7fa] text-[#555] hover:bg-[#e8ebf0]'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 📦 SERVICES GRID - Small Modern Cards */}
-      <section id="services-grid" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((s) => (
-              <div 
-                key={s.id} 
-                className={`group flex flex-col bg-white border rounded-2xl p-8 transition-all duration-500 ${
-                  s.popular 
-                    ? 'border-[#1a73e8] shadow-2xl shadow-blue-500/5 ring-1 ring-[#1a73e8]/20' 
-                    : 'border-[#1a73e8]/10 hover:border-[#1a73e8]/40'
-                }`}
-              >
-                {/* Header Info */}
-                <div className="flex justify-between items-start mb-8">
-                  <div className={`p-4 rounded-2xl ${s.popular ? 'bg-[#1a73e8] text-white' : 'bg-[#f4f7fa] text-[#1a73e8]'}`}>
-                    <s.icon className="h-6 w-6" />
+        {/* 📦 SERVICES GRID - Small Modern Cards */}
+        <section id="services-grid" className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((s) => (
+                <div 
+                  key={s.id} 
+                  className="group flex flex-col bg-white border border-[#1a73e8]/10 rounded-2xl p-8 hover:border-[#1a73e8]/40 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500"
+                >
+                  <div className="h-14 w-14 rounded-xl bg-[#1a73e8]/10 flex items-center justify-center mb-8 group-hover:bg-[#1a73e8] transition-colors duration-500">
+                    <s.icon className="h-6 w-6 text-[#1a73e8] group-hover:text-white transition-colors duration-500" />
                   </div>
-                  {s.popular && (
-                    <Badge className="bg-[#1a73e8] text-white text-[9px] font-bold border-none px-3 py-1">
-                      RECOMMENDED
-                    </Badge>
-                  )}
+                  
+                  <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-[#1a73e8] transition-colors text-[16px]">
+                    {s.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-[13px] leading-relaxed font-semibold mb-8 flex-1">
+                    {s.description}
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    {s.features.map((f, i) => (
+                      <div key={i} className="flex items-center text-[10px] font-bold text-foreground/70 uppercase tracking-widest leading-none">
+                        <Check className="h-3 w-3 mr-3 text-[#1a73e8]" />
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-8 border-t border-border/40 flex items-center justify-between">
+                    <div>
+                        <p className="text-[9px] font-black text-muted-foreground/40 uppercase tracking-widest mb-1">Starting from</p>
+                        <p className="text-sm font-black text-foreground">{s.price}</p>
+                    </div>
+                    <Link to="/contact" className="text-[10px] font-bold text-[#1a73e8] uppercase tracking-[0.2em] flex items-center group-hover:translate-x-1 transition-transform">
+                        Inquire <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    </Link>
+                  </div>
                 </div>
+              ))}
+            </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-4 text-foreground tracking-tight group-hover:text-[#1a73e8] transition-colors uppercase text-[15px]">
-                  {s.title}
-                </h3>
-                <p className="text-muted-foreground text-[13px] leading-relaxed font-semibold mb-8">
-                  {s.description}
-                </p>
-
-                {/* Features List */}
-                <ul className="space-y-4 mb-10 flex-1">
-                  {s.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-[11px] font-bold text-foreground/80 lowercase tracking-wide">
-                      <Check className="h-3.5 w-3.5 text-[#1a73e8] mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Pricing & CTA */}
-                <div className="pt-8 border-t border-border/40 flex items-center justify-between">
-                  <span className="text-[12px] font-black tracking-widest text-[#1a73e8]">
-                    {s.price}
-                  </span>
-                  <Link 
-                    to="/request-website" 
-                    className="inline-flex items-center text-[10px] font-bold text-foreground hover:text-[#1a73e8] transition-colors uppercase tracking-[0.2em]"
-                  >
-                    Details <ArrowRight className="ml-2 h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+            {/* ⬆️ BACK TO TOP OF SECTION */}
+            <div className="mt-16 flex justify-center border-t border-border/40 pt-12">
+               <button 
+                 onClick={() => handleFilterChange(filter)}
+                 className="inline-flex items-center text-[10px] font-bold text-muted-foreground hover:text-[#1a73e8] uppercase tracking-[0.3em] transition-all group"
+               >
+                 Back to Filters <ArrowRight className="ml-2 h-3.5 w-3.5 -rotate-90 group-hover:-translate-y-1 transition-transform" />
+               </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* 🚀 FINAL CTA SECTION */}
       <section className="py-24 bg-[#f8fafc] border-t border-border/40">
