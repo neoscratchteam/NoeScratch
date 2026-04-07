@@ -63,7 +63,7 @@ ${formData.message}
     <div className="min-h-screen bg-white">
       
       {/* 🚀 MODERN HERO SECTION - Vertically Centered */}
-      <section className="min-h-[40vh] py-24 flex flex-col justify-center bg-[#1a73e8] relative overflow-hidden text-center">
+      <section className="min-h-[40vh] pt-24 lg:pt-36 pb-24 flex flex-col justify-center bg-[#1a73e8] relative overflow-hidden text-center">
         <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-fade-in">
