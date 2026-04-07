@@ -287,7 +287,6 @@ export default function Services() {
 
                   <div className="pt-8 border-t border-border/40 flex items-center justify-between">
                     <div>
-                        <p className="text-[9px] font-black text-muted-foreground/40 uppercase tracking-widest mb-1">Starting from</p>
                         <p className="text-sm font-black text-foreground">{s.price}</p>
                     </div>
                     <Link href="/contact" className="text-[10px] font-bold text-[#1a73e8] uppercase tracking-[0.2em] flex items-center group-hover:translate-x-1 transition-transform">
