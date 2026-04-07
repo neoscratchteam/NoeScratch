@@ -158,10 +158,10 @@ export default function About() {
                     </p>
                     <div className="flex items-center gap-3">
                        <Button size="sm" className="rounded-full bg-[#0077b5] hover:bg-[#0077b5]/90 text-white font-bold h-9 px-6 text-[10px] tracking-widest shadow-xl shadow-blue-500/20" asChild>
-                          <a href="https://linkedin.com/in/theogene-iradukunda" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                          <a href="https://www.linkedin.com/in/theogene-iradukunda-88b07a381/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
                        </Button>
                        <Button size="sm" className="rounded-full bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 text-white font-bold h-9 px-6 text-[10px] tracking-widest shadow-xl shadow-blue-400/20" asChild>
-                          <a href="https://twitter.com/theogene_ir" target="_blank" rel="noopener noreferrer">TWITTER</a>
+                          <a href="https://x.com/theo_dev_rw" target="_blank" rel="noopener noreferrer">TWITTER</a>
                        </Button>
                     </div>
                   </div>
