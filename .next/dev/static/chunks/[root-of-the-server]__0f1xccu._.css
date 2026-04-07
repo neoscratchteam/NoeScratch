@@ -1099,6 +1099,10 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 320px;
 }
 
+.min-h-\[40vh\] {
+  min-height: 40vh;
+}
+
 .min-h-\[600px\] {
   min-height: 600px;
 }
@@ -1117,10 +1121,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .min-h-svh {
   min-height: 100svh;
-}
-
-.min-h-\[40vh\] {
-  min-height: 40vh;
 }
 
 .w-0 {
@@ -1735,6 +1735,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1793,12 +1799,6 @@ h1, h2, h3, h4, h5, h6 {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-start {
@@ -2339,6 +2339,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: .5rem;
 }
 
+.p-2\.5 {
+  padding: .625rem;
+}
+
 .p-3 {
   padding: .75rem;
 }
@@ -2357,10 +2361,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .p-\[1px\] {
   padding: 1px;
-}
-
-.p-2\.5 {
-  padding: .625rem;
 }
 
 .px-1 {
@@ -2783,16 +2783,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.05em;
 }
 
+.tracking-wide {
+  letter-spacing: .025em;
+}
+
 .tracking-wider {
   letter-spacing: .05em;
 }
 
 .tracking-widest {
   letter-spacing: .1em;
-}
-
-.tracking-wide {
-  letter-spacing: .025em;
 }
 
 .text-\[\#1a73e8\] {
@@ -2949,8 +2949,20 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-white\/20 {
+  color: #fff3;
+}
+
+.text-white\/30 {
+  color: #ffffff4d;
+}
+
 .text-white\/40 {
   color: #fff6;
+}
+
+.text-white\/60 {
+  color: #fff9;
 }
 
 .text-white\/70 {
@@ -2963,18 +2975,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-white\/90 {
   color: #ffffffe6;
-}
-
-.text-white\/20 {
-  color: #fff3;
-}
-
-.text-white\/30 {
-  color: #ffffff4d;
-}
-
-.text-white\/60 {
-  color: #fff9;
 }
 
 .underline-offset-4 {
@@ -3456,13 +3456,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .running {
   animation-play-state: running;
-}
-
-.text-gradient {
-  background: var(--gradient-primary);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 
 .\[mask-image\:radial-gradient\(ellipse_at_center\,transparent_20\%\,black\)\] {
@@ -5107,11 +5100,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.75rem;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:opacity-0 {
     opacity: 0;
   }
@@ -5308,12 +5296,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
   }
 
-  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
   .lg\:p-12 {
     padding: 3rem;
   }
@@ -5339,9 +5321,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 2rem;
   }
 
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:py-24 {
@@ -5357,11 +5339,6 @@ h1, h2, h3, h4, h5, h6 {
   .lg\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .lg\:pb-20 {
