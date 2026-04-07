@@ -46,7 +46,7 @@ export default function Projects() {
       {/* 🟢 NAVIGATION WRAPPER - Confines the Sticky Filter to the Results Section */}
       <div className="relative">
         {/* 🚀 MODERN HERO SECTION - Matches Service Page */}
-        <section className="pb-24 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
+        <section className="pt-24 lg:pt-36 pb-24 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
           {/* Large Grid Overlay */}
           <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
           
