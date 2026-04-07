@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { Send, Check, MessageCircle, ArrowRight, Zap, Shield, Globe, ExternalLink, Smartphone, Code, Heart, Palette, Calculator, Search, Settings } from 'lucide-react';
+import { 
+  Send, Check, MessageCircle, ArrowRight, Zap, Shield, Globe, 
+  ExternalLink, Smartphone, Code, Heart, Palette, Calculator, 
+  Search, Settings, PenTool, FileText 
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
 
 const services = [
-  'Development', 
-  'E-commerce', 
-  'Mobile App', 
-  'Design', 
-  'Strategy', 
-  'Portfolio', 
-  'Education', 
-  'Maintenance', 
-  'NGOs',
-  'Update', 
-  'Domain Name',
-  'Not sure yet'
+  'Website Design',
+  'Google Business Profile',
+  'SEO',
+  'Custom Software',
+  'Mobile App',
+  'Website Maintenance',
+  'Not sure yet',
 ];
 
 const budgetRanges = [
@@ -62,8 +62,8 @@ export default function RequestWebsite() {
 *Business:* ${formData.company || 'N/A'}
 
 *PROJECT DETAILS*
-*Service Category:* ${formData.serviceType}
-*Budget Range:* ${formData.budget}
+*Service:* ${formData.serviceType}
+*Budget:* ${formData.budget}
 *Existing Website:* ${formData.hasWebsite}
 ${formData.hasWebsite === 'Yes' ? `*Domain:* ${formData.domain}` : ''}
 
@@ -108,18 +108,18 @@ _Request sent from neoscratch.rw inquiry portal_
         </div>
       </section>
 
-      {/* 📝 PROJECT INQUIRY FORM - SYNCED WITH SERVICES DATA */}
+      {/* 📝 PROJECT INQUIRY FORM - CONFINED EXPERIENCE */}
       <section className="py-20 bg-[#f8fafc]">
-        <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-border/40 rounded-3xl p-6 lg:p-10 shadow-2xl shadow-blue-500/5">
-            <form onSubmit={handleSubmit} className="space-y-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-border/40 rounded-[2.5rem] p-8 lg:p-12 shadow-2xl shadow-blue-500/5">
+            <form onSubmit={handleSubmit} className="space-y-12">
               
               {/* Section 1: Your Details */}
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <h2 className="text-[17px] font-black tracking-tight text-foreground border-l-4 border-[#1a73e8] pl-4">Your details</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
                   <div>
-                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-2">Your name *</label>
+                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-3">Your name *</label>
                     <input
                       name="name"
                       value={formData.name}
@@ -130,7 +130,7 @@ _Request sent from neoscratch.rw inquiry portal_
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-2">Phone / WhatsApp *</label>
+                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-3">Phone / WhatsApp *</label>
                     <input
                       name="whatsapp"
                       value={formData.whatsapp}
@@ -141,7 +141,7 @@ _Request sent from neoscratch.rw inquiry portal_
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-2">Business Email</label>
+                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-3">Business Email</label>
                     <input
                       type="email"
                       name="email"
@@ -152,7 +152,7 @@ _Request sent from neoscratch.rw inquiry portal_
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-2">Business name</label>
+                    <label className="block text-[11px] font-black text-muted-foreground/80 uppercase tracking-widest mb-3">Business name</label>
                     <input
                       name="company"
                       value={formData.company}
@@ -164,8 +164,8 @@ _Request sent from neoscratch.rw inquiry portal_
                 </div>
               </div>
 
-              {/* Section 2: What do you need? - SYNCED CATEGORIES */}
-              <div className="space-y-6">
+              {/* Section 2: What do you need? */}
+              <div className="space-y-8">
                 <h2 className="text-[17px] font-black tracking-tight text-foreground border-l-4 border-[#1a73e8] pl-4">What do you need? *</h2>
                 <div className="flex flex-wrap gap-2.5">
                   {services.map((s) => (
@@ -173,9 +173,9 @@ _Request sent from neoscratch.rw inquiry portal_
                       key={s}
                       type="button"
                       onClick={() => toggleSelection('serviceType', s)}
-                      className={`px-4 py-2 rounded-xl border text-[11px] font-black transition-all duration-300 ${
+                      className={`px-4 py-2.5 rounded-xl border text-[12px] font-black transition-all duration-300 ${
                         formData.serviceType === s 
-                          ? 'bg-[#1a73e8] text-white border-[#1a73e8]' 
+                          ? 'bg-[#1a73e8] text-white border-[#1a73e8] shadow-lg shadow-blue-500/10' 
                           : 'bg-white text-muted-foreground/80 border-border hover:border-[#1a73e8]/30 hover:text-[#1a73e8]'
                       }`}
                     >
@@ -185,44 +185,8 @@ _Request sent from neoscratch.rw inquiry portal_
                 </div>
               </div>
 
-              {/* Section 3: Existing Website Logic */}
-              <div className="space-y-6 pt-2">
-                  <h2 className="text-[17px] font-black tracking-tight text-foreground border-l-4 border-[#1a73e8] pl-4 capitalize">Exist an current website?</h2>
-                  <div className="flex gap-3 max-w-[240px]">
-                      {['Yes', 'No'].map(choice => (
-                        <button
-                          key={choice}
-                          type="button"
-                          onClick={() => setFormData({...formData, hasWebsite: choice})}
-                          className={`flex-1 py-3.5 rounded-xl border text-[11px] font-black uppercase tracking-widest transition-all ${
-                            formData.hasWebsite === choice 
-                              ? 'bg-[#1a73e8] text-white border-[#1a73e8]' 
-                              : 'bg-white text-muted-foreground/60 border-border'
-                          }`}
-                        >
-                          {choice}
-                        </button>
-                      ))}
-                  </div>
-                  {formData.hasWebsite === 'Yes' && (
-                    <div className="animate-fade-in pt-2">
-                       <div className="relative">
-                          <input
-                            name="domain"
-                            value={formData.domain}
-                            onChange={handleInputChange}
-                            className="w-full px-5 py-3.5 pl-12 border border-border/60 rounded-xl bg-white focus:border-[#1a73e8] focus:ring-0 transition-all text-[13px] font-semibold placeholder:text-muted-foreground/40"
-                            placeholder="www.your-current-site.com"
-                            required={formData.hasWebsite === 'Yes'}
-                          />
-                          <Globe className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#1a73e8] opacity-40" />
-                       </div>
-                    </div>
-                  )}
-              </div>
-
-              {/* Section 4: Budget range */}
-              <div className="space-y-6">
+              {/* Section 3: Budget range */}
+              <div className="space-y-8">
                 <h2 className="text-[17px] font-black tracking-tight text-foreground border-l-4 border-[#1a73e8] pl-4">Budget range</h2>
                 <div className="flex flex-wrap gap-2.5">
                   {budgetRanges.map((r) => (
@@ -230,7 +194,7 @@ _Request sent from neoscratch.rw inquiry portal_
                       key={r}
                       type="button"
                       onClick={() => toggleSelection('budget', r)}
-                      className={`px-4 py-2 rounded-xl border text-[11px] font-black transition-all duration-300 ${
+                      className={`px-4 py-2.5 rounded-xl border text-[12px] font-black transition-all duration-300 ${
                         formData.budget === r 
                           ? 'border-[#1a73e8] text-[#1a73e8] border-2 bg-white' 
                           : 'bg-white text-muted-foreground/80 border-border hover:border-[#1a73e8]/30 hover:text-[#1a73e8]'
@@ -242,14 +206,14 @@ _Request sent from neoscratch.rw inquiry portal_
                 </div>
               </div>
 
-              {/* Section 5: Tell us briefly */}
-              <div className="space-y-6">
+              {/* Section 4: Tell us briefly */}
+              <div className="space-y-8">
                 <h2 className="text-[17px] font-black tracking-tight text-foreground border-l-4 border-[#1a73e8] pl-4">Tell us briefly</h2>
                 <textarea
                   name="description"
                   value={formData.description}
                   onChange={handleInputChange}
-                  rows={5}
+                  rows={6}
                   className="w-full px-6 py-6 border border-border/60 rounded-xl bg-white focus:border-[#1a73e8] focus:ring-0 transition-all text-[13px] font-semibold resize-none placeholder:text-muted-foreground/30"
                   placeholder="What does your business do? What do you need help with? Any specific features or deadlines?"
                   required
@@ -277,33 +241,40 @@ _Request sent from neoscratch.rw inquiry portal_
         </div>
       </section>
 
-      {/* 🏗️ ARCHITECTURE STEPS - MINIMALIST */}
-      <section className="py-20 bg-white border-t border-border/40">
+      {/* 🏗️ ARCHITECTURAL WORKFLOW - HIGH IMPACT STEPS */}
+      <section className="py-24 bg-white border-t border-border/10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+           <div className="text-center mb-16">
+              <span className="text-[10px] font-black tracking-[0.3em] text-[#1a73e8] uppercase">Our Process</span>
+              <h2 className="text-3xl font-bold text-foreground mt-4 uppercase">From Scratch to <span className="opacity-40">Engineering</span></h2>
+           </div>
+           
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-8">
              {[
-               { id: '01', title: 'TECHNICAL BRIEF', desc: 'Secure project submission.' },
-               { id: '02', title: 'EXECUTIVE REVIEW', desc: 'Requirements analysis.' },
-               { id: '03', title: 'PROPOSAL PHASE', desc: 'Architecture map and quote.' },
-               { id: '04', title: 'ENGINEERING', desc: 'Industry-leading build.' }
-             ].map(step => (
-               <div key={step.id} className="group">
-                  <span className="text-2xl font-black text-[#1a73e8]/10 mb-2 block">{step.id}</span>
-                  <h3 className="text-[10px] font-black tracking-widest text-foreground mb-1 uppercase">{step.title}</h3>
-                  <p className="text-[11px] font-bold text-muted-foreground leading-tight">{step.desc}</p>
+               { id: '01', icon: <PenTool className="h-5 w-5" />, title: 'TECHNICAL BRIEF', desc: 'Secure project parameters submission through our portal.' },
+               { id: '02', icon: <Search className="h-5 w-5" />, title: 'EXECUTIVE REVIEW', desc: 'Our lead engineers analyze requirements for global scalability.' },
+               { id: '03', icon: <FileText className="h-5 w-5" />, title: 'PROPOSAL PHASE', desc: 'Detailed architecture map, timeline, and optimized quote.' },
+               { id: '04', icon: <Code className="h-5 w-5" />, title: 'ENGINEERING', desc: 'Building your vision using high-end industry standards.' }
+             ].map((step, i) => (
+               <div key={step.id} className="relative group p-8 rounded-[2rem] border border-border/40 hover:border-[#1a73e8]/30 transition-all duration-500 bg-white hover:shadow-2xl hover:shadow-blue-500/5">
+                  <div className="flex items-center justify-between mb-8">
+                     <div className="h-12 w-12 rounded-2xl bg-[#f4f7fa] flex items-center justify-center text-[#1a73e8] group-hover:bg-[#1a73e8] group-hover:text-white transition-all duration-500">
+                        {step.icon}
+                     </div>
+                     <span className="text-[13px] font-black text-[#1a73e8]/20 group-hover:text-[#1a73e8]/40 transition-colors uppercase tracking-widest">{step.id}</span>
+                  </div>
+                  <h3 className="text-[14px] font-black tracking-widest text-foreground mb-4 uppercase group-hover:text-[#1a73e8] transition-colors">{step.title}</h3>
+                  <p className="text-[13px] font-semibold text-muted-foreground/80 leading-relaxed">{step.desc}</p>
+                  
+                  {/* Visual Connection (Desktop Only) */}
+                  {i < 3 && (
+                    <div className="hidden md:block absolute top-[60px] -right-[15%] w-1/4 h-[1px] bg-gradient-to-r from-[#1a73e8]/20 to-transparent z-0" />
+                  )}
                </div>
              ))}
            </div>
         </div>
       </section>
     </div>
-  );
-}
-
-function Badge({ children, className }: { children: React.ReactNode; className?: string }) {
-  return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full font-medium ${className}`}>
-      {children}
-    </span>
   );
 }
