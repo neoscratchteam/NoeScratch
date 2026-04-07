@@ -46,7 +46,7 @@ export default function About() {
     <div className="min-h-screen bg-background">
       
       {/* Premium Hero Section */}
-      <section className="pb-20 bg-background relative overflow-hidden">
+      <section className="pt-24 lg:pt-32 pb-20 bg-background relative overflow-hidden">
         {/* Simple background noise/grid */}
         <div className="absolute inset-x-0 bottom-0 top-0 h-full w-full bg-grid opacity-[0.05] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none" />
         
@@ -63,7 +63,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* STICKY SIDEBAR - Matches the user's preferred detail style */}
