@@ -175,44 +175,46 @@ export const projects: Project[] = [
   },
   {
     id: 'open-future-savings',
-    title: 'Open Future Savings',
-    subtitle: 'for Open Future',
-    description: 'A digital record management platform for the Open Future savings group at Apeki Tumba TSS, enabling monthly savings tracking and secure member management.',
-    techStack: ['React', 'Firebase', 'TypeScript'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+    title: 'Open Future — Student Micro-Savings & Fintech Platform',
+    subtitle: 'for students at Apeki Tumba TSS',
+    description: 'A dedicated community savings platform for students in Rulindo District, providing transparent digital ledgers, target-based saving encouragement, and online deposit tracking.',
+    techStack: ['React', 'Firebase', 'TypeScript', 'Tailwind CSS'],
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564617/open_future_mbc6zl.png',
     liveDemo: 'https://openfuture.pages.dev',
-    category: 'web',
-    tag: 'FINTECH',
-    client: 'Open Future',
-    year: '2024',
-    price: '1,000 RWF',
+    category: 'FinTech & Education',
+    tag: 'COMMUNITY FINTECH',
+    client: 'Apeki Tumba TSS',
+    year: '2025',
+    price: 'Community Driven',
     details: {
-      overview: "Open Future Savings is a community-driven fintech solution for savings groups. It transforms traditional paper-based savings ledgers into transparent, secure digital record systems accessible to all members globally.",
-      objective: "To build trust within the savings group by providing real-time visibility into contributions, loans, and group financial health while simplifying the admin's workload.",
+      overview: "Open Future is a transformative financial literacy platform developed specifically for the savings group at Apeki Tumba TSS in Rulindo District. It eliminates outdated paper-based reporting by providing each member with a personal digital account to monitor their growth and contribute securely from anywhere.",
+      objective: "To foster a culture of structured savings among students by providing an intuitive system that tracks the mandatory 5K RWF monthly contribution and provides visual feedback through goal-setting and target-progress tracking.",
       delivered: [
-        "Personal saving dashboards for all members",
-        "Automated monthly contribution logging",
-        "Loan request and tracking system",
-        "Admin panel for financial audits",
-        "Global notification integration for contribution confirmations"
+        "Personal saving target & goal visualization engine",
+        "Secure online deposit recording and transaction history",
+        "Admin dashboard for monitoring group contribution health",
+        "Automated flags for members below minimum contribution levels",
+        "Transparent real-time financial reporting for all members",
+        "Mobile-optimized interface for on-campus accessibility",
+        "Fully digital replacement for manual ledger books"
       ],
       process: [
         {
-          title: "Stakeholder Alignment",
-          description: "Hosted workshops with group leaders to ensure the system adhered to their existing bylaws."
+          title: "Community Consultation",
+          description: "Met with student leaders at Apeki Tumba to understand the specific rules of their savings cooperative (SACCO-lite)."
         },
         {
-          title: "Secure Development",
-          description: "Prioritized Firebase Authentication and security rules to protect sensitive financial data."
+          title: "Gamification & Progress",
+          description: "Implemented a progress system where students can see how close they are to their personal purchasing goals or semester savings targets."
         },
         {
-          title: "Training",
-          description: "Conducted training sessions for the group admin to manage the digital transition."
+          title: "Security & Trust",
+          description: "Prioritized immutable transaction logging to ensure every RWF is accounted for, building absolute trust within the group."
         }
       ],
-      results: "The group reported a 40% increase in member engagement and excitement, as members can now track their financial growth on their devices.",
-      conclusion: "Digitizing community finance strengthens group bonds and prepares members for larger formal banking systems.",
-      services: ["FinTech", "Community Tools", "Record Management"]
+      results: "Open Future has fundamentally changed how the group operates, increasing member contribution consistency and trust. The finance administrator now handles audits in seconds rather than hours of manual calculation.",
+      conclusion: "Open Future is more than an app; it is a financial empowerment tool for the next generation of engineers and entrepreneurs in Rulindo.",
+      services: ["Community FinTech", "Finacial Literacy Tools", "Custom Web Development"]
     }
   },
   {
