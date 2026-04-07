@@ -91,7 +91,7 @@ export function Header() {
                 ? "bg-white text-primary border-white hover:bg-white/90" 
                 : "border-white text-white hover:bg-white hover:text-primary"}`}
             >
-              <Link to="/request-website">Get Free Quote</Link>
+              <Link to="/request-website">Get Your Website</Link>
             </Button>
           </div>
 
