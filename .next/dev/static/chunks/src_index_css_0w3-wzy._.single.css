@@ -3774,6 +3774,10 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .8;
 }
 
+.hover\:opacity-90:hover {
+  opacity: .9;
+}
+
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px #00000040;
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -4933,6 +4937,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:h-\[500px\] {
     height: 500px;
+  }
+
+  .md\:h-8 {
+    height: 2rem;
+  }
+
+  .md\:h-10 {
+    height: 2.5rem;
   }
 
   .md\:min-h-\[800px\] {

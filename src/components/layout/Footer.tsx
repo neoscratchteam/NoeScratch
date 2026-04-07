@@ -42,10 +42,11 @@ export function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-8">
               <Link href="/" className="inline-block group">
-                <span className="font-outfit text-2xl font-black tracking-tighter text-white uppercase transition-all">
-                  NEOSCRATCH
-                </span>
-                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-extrabold -mt-1 group-hover:text-white transition-colors">Software House</p>
+                <img 
+                  src="/logo.svg" 
+                  className="h-8 md:h-10 hover:opacity-90 transition-opacity" 
+                  alt="NEOSCRATCH Logo" 
+                />
               </Link>
               
               <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium">

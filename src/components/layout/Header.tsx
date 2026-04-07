@@ -55,9 +55,11 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 hover:opacity-75 transition-opacity duration-300"
           >
-            <span className="font-outfit text-xl md:text-2xl font-black tracking-tighter text-white uppercase transition-colors">
-              NEOSCRATCH
-            </span>
+            <img 
+              src="/logo.svg" 
+              className="h-6 md:h-8 hover:opacity-90 transition-opacity" 
+              alt="NEOSCRATCH Logo" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
