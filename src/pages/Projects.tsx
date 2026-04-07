@@ -8,6 +8,24 @@ import { ArrowUpRight, ArrowRight } from 'lucide-react';
 export default function Projects() {
   const [filter, setFilter] = useState('All Projects');
   
+  const handleFilterChange = (cat: string) => {
+    setFilter(cat);
+    // Smooth scroll to the top of the projects section
+    const element = document.getElementById('projects-grid');
+    if (element) {
+      const offset = 140; // Accounting for sticky header + filter bar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const categories = [
     'All Projects', 
     'Website Design & Development', 
@@ -47,14 +65,14 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Filter Bar - Pill Buttons */}
+      {/* 🔍 FILTER BAR - Pill Buttons */}
       <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center">
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setFilter(cat)}
+                onClick={() => handleFilterChange(cat)}
                 className={`px-5 py-2 rounded-full text-[12px] font-bold transition-all duration-300 ${
                   filter === cat 
                     ? 'bg-[#1a73e8] text-white shadow-lg shadow-blue-500/10' 
@@ -69,7 +87,7 @@ export default function Projects() {
       </section>
 
       {/* Project Grid - Modern Small Cards */}
-      <section className="py-24">
+      <section id="projects-grid" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((p) => (
