@@ -1,11 +1,11 @@
 export const testimonials = [
   {
-    name: 'Mr. Faustina',
-    role: 'Owner, Private Business',
-    serviceType: 'Business Management System',
-    link: 'https://pixelmartrw.pages.dev',
-    content: 'NeoScratch developed a comprehensive management system for my business. Managing products, branches, and employees has never been easier!',
-    avatar: '/faustin.jpg',
+    name: 'Mr. Faustin Hagenimana',
+    role: 'CEO & Founder, PixelMart LCD Rwanda',
+    serviceType: 'Inventory & ERP System',
+    link: 'https://pixelmartrw.vercel.app',
+    content: 'NeoScratch developed a comprehensive management system for my business. Tracked products, multiple branches, and automated reporting has never been easier!',
+    avatar: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775569550/faustin_gok4su.jpg',
   },
   {
     name: 'Open Future',

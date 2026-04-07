@@ -48,17 +48,17 @@ export const upcomingEvents: Event[] = [
 
 export const pastEvents = [
   {
-    title: 'PixelMart Management Launch',
-    date: '2025-12-26',
-    description: 'Successfully deployed the PixelMart inventory system for multi-branch retail management in Kigali.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+    title: 'PixelMart Unified Headquarters Launch',
+    date: '2026-01-10',
+    description: 'Successfully deployed the PixelMart ERP and financial headquarters for Mr. Faustin Hagenimana, revolutionizing multi-branch retail management.',
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564616/pixelmartsold_yabygf.png',
     author: 'Theogene Iradukunda'
   },
   {
-    title: 'Twagiye Taxi Web Engine',
-    date: '2026-01-15',
-    description: 'The global release of the Twagiye eco-friendly ride-hailing platform marketing and driver portal.',
-    image: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1200&auto=format&fit=crop',
+    title: 'SmartStock Ultimate BMS Release',
+    date: '2026-02-15',
+    description: 'The global release of the SmartStock Business Management System for Mr. Juldas, enabling real-time P&L analytics and branch synchronization.',
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564686/smartstock_tbgyi2.png',
     author: 'Theogene Iradukunda'
   },
 ];

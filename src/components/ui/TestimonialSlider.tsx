@@ -9,11 +9,11 @@ export function TestimonialSlider() {
   const next = () => setActiveIndex((prev) => (prev + 1) % testimonials.length);
   const prev = () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
-  // Auto-move functionality (5 second interval)
+  // Auto-move functionality (8 second interval for relaxed reading)
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
