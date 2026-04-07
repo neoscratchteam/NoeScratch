@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send, Globe, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import Link from 'next/link';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -61,19 +62,18 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-white">
       
-      {/* 🚀 PREMIUM HERO SECTION - Matches Design System */}
-      <section className="pb-24 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
-        {/* Large Grid Overlay */}
+      {/* 🚀 MODERN HERO SECTION - Vertically Centered */}
+      <section className="min-h-[40vh] py-24 flex flex-col justify-center bg-[#1a73e8] relative overflow-hidden text-center">
         <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-fade-in">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest mb-6 animate-slide-up">
              <span>Global Support Hub</span>
           </div>
-          <h1 className="text-4xl lg:text-7xl font-bold tracking-tight mb-8 animate-fade-in max-w-4xl mx-auto uppercase">
+          <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in max-w-4xl mx-auto uppercase leading-tight">
              Let's Build the <br /> <span className="opacity-70">Future Together.</span>
           </h1>
-          <p className="text-sm lg:text-[15px] opacity-80 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up">
+          <p className="text-sm lg:text-[15px] text-white/80 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up">
              Connect with our engineering team for high-end software development, digital strategy, or technical consultation. We operate globally from the heart of Rwanda.
           </p>
         </div>

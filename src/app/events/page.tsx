@@ -35,14 +35,15 @@ export default function Events() {
       
       {/* 🟢 NAVIGATION WRAPPER - Confines the Sticky Filter to the Results Section */}
       <div className="relative">
-        <section className="pb-24 lg:pb-32 bg-[#1a73e8] relative overflow-hidden">
+        {/* 🚀 MODERN HERO SECTION - Vertically Centered */}
+        <section className="min-h-[40vh] py-24 flex flex-col justify-center bg-[#1a73e8] relative overflow-hidden text-center">
           <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" style={{ backgroundSize: '60px 60px' }} />
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-fade-in">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest mb-6 animate-slide-up">
               <span>Tech Leadership & Innovation</span>
             </div>
-            <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in max-w-4xl mx-auto uppercase">
+            <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in max-w-4xl mx-auto uppercase leading-tight">
               Ignite Your <br /> Tech <span className="opacity-70">Trajectory.</span>
             </h1>
             <p className="text-sm lg:text-[15px] text-white/80 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up">

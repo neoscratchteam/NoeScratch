@@ -1040,6 +1040,10 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100svh;
 }
 
+.min-h-\[40vh\] {
+  min-height: 40vh;
+}
+
 .w-0 {
   width: 0;
 }
@@ -5022,6 +5026,11 @@ h1, h2, h3, h4, h5, h6 {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:opacity-0 {
