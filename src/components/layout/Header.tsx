@@ -1,5 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Code, MessageCircle } from 'lucide-react';
 
@@ -21,7 +23,7 @@ const navigation: NavigationItem[] = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,9 +36,9 @@ export function Header() {
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
-  const isHomePage = location.pathname === '/';
+  const isHomePage = pathname === '/';
   const isHeaderThemed = !isHomePage || isScrolled;
 
   return (
@@ -50,7 +52,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link
-            to="/"
+            href="/"
             className="flex items-center space-x-2 hover:opacity-75 transition-opacity duration-300"
           >
             <img 
@@ -67,10 +69,10 @@ export function Header() {
               .map((item) => (
                 <Link
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group ${isHeaderThemed 
                     ? 'hover:bg-white/10' 
-                    : 'hover:bg-white/20'} ${location.pathname === item.href
+                    : 'hover:bg-white/20'} ${pathname === item.href
                       ? 'bg-white/20 text-white'
                       : 'text-white'
                     }`}
@@ -90,7 +92,7 @@ export function Header() {
                 ? "bg-white text-primary border-white hover:bg-white/90" 
                 : "border-white text-white hover:bg-white hover:text-primary"}`}
             >
-              <Link to="/request-website">Get Your Website</Link>
+              <Link href="/request-website">Get Your Website</Link>
             </Button>
           </div>
 
@@ -114,8 +116,8 @@ export function Header() {
               {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.href}
-                  className={`relative flex items-center w-fit px-3 py-2 rounded-md text-base font-medium transition-colors ${location.pathname === item.href
+                  href={item.href}
+                  className={`relative flex items-center w-fit px-3 py-2 rounded-md text-base font-medium transition-colors ${pathname === item.href
                     ? 'bg-white/20 text-white'
                     : 'text-white hover:bg-white/10'
                     }`}
@@ -125,7 +127,7 @@ export function Header() {
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="hero" className="w-full bg-white text-primary hover:bg-white/90" size="sm" asChild>
-                  <Link to="/request-website">Get Free Quote</Link>
+                  <Link href="/request-website">Get Free Quote</Link>
                 </Button>
               </div>
             </div>

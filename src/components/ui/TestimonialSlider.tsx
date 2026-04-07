@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { testimonials } from '@/data/testimonials';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function TestimonialSlider() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -122,7 +122,7 @@ export function TestimonialSlider() {
       {/* Book Now button moved to the bottom */}
       <div className="text-center animate-fade-in mt-1">
         <Link 
-          to="/request-website" 
+          href="/request-website" 
           className="inline-flex items-center justify-center bg-foreground text-background px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-md"
         >
           Book Now
