@@ -2151,6 +2151,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff3;
 }
 
+.bg-white\/40 {
+  background-color: #fff6;
+}
+
 .bg-white\/5 {
   background-color: #ffffff0d;
 }
@@ -2503,6 +2507,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: .5rem;
 }
 
+.pt-24 {
+  padding-top: 6rem;
+}
+
 .pt-3 {
   padding-top: .75rem;
 }
@@ -2517,10 +2525,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
 }
 
 .text-left {
@@ -3383,6 +3387,10 @@ h1, h2, h3, h4, h5, h6 {
   animation-play-state: running;
 }
 
+.font-outfit {
+  font-family: var(--font-outfit), sans-serif;
+}
+
 .\[mask-image\:radial-gradient\(ellipse_at_center\,transparent_20\%\,black\)\] {
   -webkit-mask-image: radial-gradient(#0000 20%, #000);
   mask-image: radial-gradient(#0000 20%, #000);
@@ -4045,6 +4053,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .group\/menu-item:hover .group-hover\/menu-item\:opacity-100, .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+.group:hover .group-hover\:opacity-75 {
+  opacity: .75;
 }
 
 .group:hover .group-hover\:grayscale-0 {
@@ -4909,10 +4921,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:h-10 {
-    height: 2.5rem;
   }
 
   .md\:h-\[450px\] {

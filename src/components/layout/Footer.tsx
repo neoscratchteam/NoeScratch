@@ -41,19 +41,11 @@ export function Footer() {
             
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-8">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="bg-white/10 p-2.5 rounded-2xl border border-white/10 transition-colors group-hover:bg-white/20">
-                  <img 
-                    src="/neoscratch.png" 
-                    width={24} 
-                    className="brightness-0 invert"
-                    alt="NeoScratch Logo" 
-                  />
-                </div>
-                <div>
-                  <span className="text-2xl font-bold tracking-tight">NeoScratch</span>
-                  <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold -mt-1">Technical Studio</p>
-                </div>
+              <Link href="/" className="inline-block group">
+                <span className="font-outfit text-2xl font-black tracking-tighter text-white uppercase flex items-center group-hover:opacity-75 transition-opacity">
+                  NEOSCRATCH<span className="h-1.5 w-1.5 rounded-full bg-white/40 ml-1.5"></span>
+                </span>
+                <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold -mt-1 group-hover:opacity-75 transition-opacity">Technical Studio</p>
               </Link>
               
               <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium">

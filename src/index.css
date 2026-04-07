@@ -177,6 +177,10 @@
 }
 
 @layer utilities {
+  .font-outfit {
+    font-family: var(--font-outfit), sans-serif;
+  }
+
   .text-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
