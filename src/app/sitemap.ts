@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://neoscratch.com'
+  const baseUrl = 'https://neoscratch.vercel.app'
   
   // List of paths - ideally these could be dynamic from a CMS or routes array
   const paths = [

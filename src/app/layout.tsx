@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://neoscratch.com'), // Assuming the domain
+  metadataBase: new URL('https://neoscratch.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "NeoScratch | Global Engineering & Creative Studio",
     description: "Building high-performance digital products and specialized consultancy in Rwanda and beyond.",
-    url: 'https://neoscratch.com',
+    url: 'https://neoscratch.vercel.app',
     siteName: 'NeoScratch',
     locale: 'en_US',
     type: 'website',
@@ -73,9 +73,9 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'NeoScratch',
-    image: 'https://neoscratch.com/og-image.png',
-    '@id': 'https://neoscratch.com',
-    url: 'https://neoscratch.com',
+    image: 'https://neoscratch.vercel.app/og-image.png',
+    '@id': 'https://neoscratch.vercel.app',
+    url: 'https://neoscratch.vercel.app',
     telephone: '+250780000000',
     address: {
       '@type': 'PostalAddress',
