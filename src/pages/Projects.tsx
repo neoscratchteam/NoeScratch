@@ -26,15 +26,8 @@ export default function Projects() {
     }
   };
 
-  const categories = [
-    'All Projects', 
-    'Website Design & Development', 
-    'Logistics & Supply Chain', 
-    'Media & Entertainment', 
-    'E-commerce & Retail', 
-    'NGO & Development',
-    'Portfolio'
-  ];
+  // 🚀 DYNAMIC CATEGORY EXTRACTION
+  const dynamicCategories = ['All Projects', ...Array.from(new Set(projects.map(p => p.category)))];
 
   const filteredProjects = filter === 'All Projects' 
     ? projects 
@@ -70,7 +63,7 @@ export default function Projects() {
       <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center">
-            {categories.map((cat) => (
+            {dynamicCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => handleFilterChange(cat)}
