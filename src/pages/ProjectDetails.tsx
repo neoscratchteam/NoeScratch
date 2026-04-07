@@ -120,13 +120,13 @@ const ProjectDetails = () => {
           </div>
 
           {/* Main Content Areas */}
-          <div className="lg:col-span-9 space-y-20 lg:pl-12">
+          <div className="lg:col-span-9 space-y-16 lg:pl-12">
             
             {/* Overview */}
             {project.details?.overview && (
               <section className="animate-fade-in">
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Project Overview</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   {project.details.overview}
                 </p>
               </section>
@@ -136,7 +136,7 @@ const ProjectDetails = () => {
             {project.details?.objective && (
               <section className="animate-fade-in">
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Objective</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   {project.details.objective}
                 </p>
               </section>
@@ -146,13 +146,13 @@ const ProjectDetails = () => {
             {project.details?.delivered && (
               <section className="animate-fade-in">
                 <h2 className="text-2xl font-bold mb-8 text-foreground">What We Delivered</h2>
-                <div className="grid sm:grid-cols-1 gap-4">
+                <div className="space-y-4">
                   {project.details.delivered.map((item, idx) => (
-                    <div key={idx} className="flex items-start bg-secondary/10 p-5 rounded-2xl border border-border/50 group hover:border-primary/20 transition-colors">
-                      <div className="bg-primary/10 rounded-full p-1.5 mr-4 mt-0.5 group-hover:bg-primary/20 transition-colors">
-                        <Check className="h-4 w-4 text-primary" />
+                    <div key={idx} className="flex items-start group">
+                      <div className="bg-primary/5 rounded-full p-1 mr-4 mt-0.5 group-hover:bg-primary/10 transition-colors">
+                        <Check className="h-3.5 w-3.5 text-primary" />
                       </div>
-                      <span className="text-muted-foreground font-medium leading-tight">{item}</span>
+                      <span className="text-muted-foreground text-sm font-medium leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -162,19 +162,16 @@ const ProjectDetails = () => {
             {/* Our Process */}
             {project.details?.process && (
               <section className="animate-fade-in">
-                <h2 className="text-2xl font-bold mb-10 text-foreground">Our Process</h2>
-                <div className="space-y-10">
+                <h2 className="text-2xl font-bold mb-8 text-foreground">Our Process</h2>
+                <div className="space-y-6">
                   {project.details.process.map((step, idx) => (
-                    <div key={idx} className="flex gap-6 relative">
-                      {idx !== project.details!.process.length - 1 && (
-                        <div className="absolute left-[15px] top-10 bottom-[-40px] w-0.5 bg-border"></div>
-                      )}
-                      <div className="flex-shrink-0 h-8 w-8 rounded-full border-2 border-primary/20 flex items-center justify-center text-primary text-xs font-bold bg-background relative z-10">
-                        {idx + 1}
+                    <div key={idx} className="flex items-start group">
+                      <div className="bg-primary/5 rounded-full p-1 mr-4 mt-0.5 group-hover:bg-primary/10 transition-colors">
+                        <Check className="h-3.5 w-3.5 text-primary" />
                       </div>
-                      <div>
-                        <h4 className="text-lg font-bold mb-2 text-foreground">{step.title}</h4>
-                        <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                      <div className="flex flex-col sm:flex-row sm:items-baseline gap-2">
+                        <span className="text-foreground text-sm font-bold min-w-[140px]">{step.title} —</span>
+                        <span className="text-muted-foreground text-sm font-medium leading-relaxed">{step.description}</span>
                       </div>
                     </div>
                   ))}
@@ -182,11 +179,21 @@ const ProjectDetails = () => {
               </section>
             )}
 
+            {/* Results & Impact */}
+            {project.details?.results && (
+              <section className="animate-fade-in">
+                <h2 className="text-2xl font-bold mb-6 text-foreground">Results & Impact</h2>
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  {project.details.results}
+                </p>
+              </section>
+            )}
+
             {/* Conclusion */}
             {project.details?.conclusion && (
               <section className="animate-fade-in">
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Conclusion</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg italic border-l-4 border-primary/30 pl-8 py-2">
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base border-l-2 border-primary/20 pl-6 py-1">
                   {project.details.conclusion}
                 </p>
               </section>
