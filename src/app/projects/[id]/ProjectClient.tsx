@@ -54,7 +54,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
                 Visit website <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-xl px-8 h-12 font-bold border-primary/20 hover:bg-primary/5 text-primary" asChild>
+            <Button size="lg" variant="outline" className="rounded-xl px-8 h-12 font-bold border-primary/20 hover:bg-primary hover:text-white transition-all duration-300" asChild>
               <Link href="/request-website">Start a similar project</Link>
             </Button>
           </div>
