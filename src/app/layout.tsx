@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "../index.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -130,6 +131,7 @@ export default function RootLayout({
             <FloatingChat />
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
