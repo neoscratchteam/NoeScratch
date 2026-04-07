@@ -25,14 +25,7 @@ export function FloatingChat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-4">
-      <Link 
-        href="/request-website" 
-        className="inline-flex items-center justify-center bg-foreground text-background px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-md"
-      >
-        Book Now
-      </Link>
-      
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center">
       <AnimatePresence>
         {showScrollTop && (
           <motion.button

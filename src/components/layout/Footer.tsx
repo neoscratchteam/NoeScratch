@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Code, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -23,12 +22,6 @@ const footerLinks = {
     { name: 'Projects', href: '/projects' },
     { name: 'Testimonials', href: '/testimonials' },
   ],
-  legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Refund Policy', href: '/refund' },
-  ],
 };
 
 const socialLinks = [
@@ -40,73 +33,66 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border/50">
+    <footer className="bg-primary text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="py-16 lg:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+            
             {/* Company Info */}
-            <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-primary p-2 rounded-xl">
-                  <img src="/neoscratch.png" width={20} alt="neoscratch business logo software developemt , neoscratch logo , theodev rwanda business logo rwanda developmemt software developement compnay in rwanda" />
+            <div className="lg:col-span-2 space-y-8">
+              <Link href="/" className="flex items-center space-x-3 group">
+                <div className="bg-white/10 p-2.5 rounded-2xl border border-white/10 transition-colors group-hover:bg-white/20">
+                  <img 
+                    src="/neoscratch.png" 
+                    width={24} 
+                    className="brightness-0 invert"
+                    alt="NeoScratch Logo" 
+                  />
                 </div>
                 <div>
-                  <span className="text-xl font-bold text-gradient">NeoScratch</span>
-                  <p className="text-sm text-muted-foreground -mt-1">Tech Innovation</p>
+                  <span className="text-2xl font-bold tracking-tight">NeoScratch</span>
+                  <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold -mt-1">Technical Studio</p>
                 </div>
               </Link>
               
-              <p className="text-muted-foreground mb-6 max-w-md">
-                Empowering Rwanda and Africa through technology. We build digital solutions, 
-                teach programming, and support innovation across the continent.
+              <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium">
+                Empowering global businesses through high-performance software engineering and digital transformation. Based in Kigali, serving the world.
               </p>
               
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Kigali, Rwanda</span>
+              <div className="space-y-4 pt-4 border-t border-white/5">
+                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                    <MapPin className="h-4 w-4" />
+                  </div>
+                  <span className="font-semibold tracking-wide">Kigali, Rwanda</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <Phone className="h-4 w-4 text-primary" />
-                  <span>+250 792 734 752</span>
+                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                    <Phone className="h-4 w-4" />
+                  </div>
+                  <span className="font-semibold tracking-wide">+250 792 734 752</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <Mail className="h-4 w-4 text-primary" />
-                  <span>customerservice@neoscratch.com</span>
+                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <span className="font-semibold tracking-wide">customerservice@neoscratch.com</span>
                 </div>
               </div>
             </div>
 
-            {/* Footer Links */}
+            {/* Footer Links - Refined Typography */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
-                Company
+              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+                Capabilities
               </h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
-                Services
-              </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -116,15 +102,33 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
-                Resources
+              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+                Network
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
+                {footerLinks.company.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+                Knowledge
+              </h3>
+              <ul className="space-y-4">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -135,39 +139,23 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        {/* <div className="py-8 border-t border-border/50">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="text-center lg:text-left">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-muted-foreground">Get the latest news about our projects and events.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button variant="default">Subscribe</Button>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Bottom Section */}
-        <div className="py-6 border-t border-border/50">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="text-sm text-muted-foreground">
-              © 2024 NeoScratch. All rights reserved.
+        {/* Bottom Section - Ultra Minimalist */}
+        <div className="py-8 border-t border-white/5">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">
+              © 2024 NEOSCRATCH INC. ENGINEERED FOR GLOBAL IMPACT.
             </div>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-white/20 hover:text-white transition-colors"
                   aria-label={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>

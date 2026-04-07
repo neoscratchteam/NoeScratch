@@ -39,7 +39,7 @@ export function Header() {
   }, [pathname]);
 
   const isHomePage = pathname === '/';
-  const isHeaderThemed = !isHomePage || isScrolled;
+  const isHeaderThemed = true;
 
   return (
     <header
