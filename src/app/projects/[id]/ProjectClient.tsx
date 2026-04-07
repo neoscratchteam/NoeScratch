@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, MessageCircle, Check, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -15,8 +16,29 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     notFound();
   }
 
+  const projectJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: project.title,
+    description: project.description,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    author: {
+      '@type': 'Organization',
+      name: 'NeoScratch',
+      url: 'https://neoscratch.vercel.app',
+    },
+    image: project.image,
+    url: `https://neoscratch.vercel.app/projects/${project.id}`,
+  };
+
   return (
     <div className="min-h-screen bg-background pb-0">
+      <Script
+        id={`project-jsonld-${project.id}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link */}
