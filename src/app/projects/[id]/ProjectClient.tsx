@@ -193,11 +193,46 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
             {/* Conclusion */}
             {project.details?.conclusion && (
-              <section className="animate-fade-in">
+              <section className="animate-fade-in mb-12">
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Conclusion</h2>
-                <p className="text-muted-foreground leading-relaxed text-sm md:text-base border-l-2 border-primary/20 pl-6 py-1">
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base border-l-2 border-primary/20 pl-6 py-1 italic font-medium">
                   {project.details.conclusion}
                 </p>
+              </section>
+            )}
+
+            {/* Project Gallery - 5 Images */}
+            {project.gallery && project.gallery.length > 0 && (
+              <section className="mt-20 pt-20 border-t border-border/40 animate-fade-in">
+                <div className="flex items-center justify-between mb-12">
+                   <div>
+                     <h2 className="text-2xl font-bold text-foreground">System Screenshots</h2>
+                     <p className="text-sm text-muted-foreground mt-2">Deep dive into the architecture and interface of {project.title}.</p>
+                   </div>
+                   <Badge variant="outline" className="rounded-full px-4 py-1 text-[10px] font-black uppercase text-primary border-primary/20 bg-primary/5">
+                     Full Preview
+                   </Badge>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {project.gallery.map((img, index) => (
+                    <div 
+                      key={index} 
+                      className={`relative rounded-2xl overflow-hidden border border-border bg-secondary/10 group shadow-sm hover:shadow-xl transition-all duration-500 ${
+                        index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                      }`}
+                    >
+                      <img 
+                        src={img} 
+                        alt={`${project.title} screenshot ${index + 1}`} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                         <span className="text-white text-[10px] font-black uppercase tracking-widest">View Full Intensity</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </section>
             )}
 

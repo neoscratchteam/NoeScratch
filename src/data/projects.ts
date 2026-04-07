@@ -21,6 +21,7 @@ export interface Project {
   client: string;
   year: string;
   price?: string;
+  gallery?: string[];
   details?: ProjectDetails;
 }
 
@@ -38,6 +39,13 @@ export const projects: Project[] = [
     client: 'Mr. Faustin Hagenimana',
     year: '2025',
     price: 'Custom Enterprise',
+    gallery: [
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775570257/pixelmart_dashboard_w9dam2.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564616/pixelmartsold_yabygf.png',
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop'
+    ],
     details: {
       overview: "PixelMart is a high-performance inventory and multi-branch management ecosystem designed specifically for PixelMart LCD Rwanda. It digitalizes the entire sales lifecycle of phone accessories—from screens to spare parts—across numerous physical locations, ensuring that all data flows into a unified administrative core.",
       objective: "To eliminate the delays of manual end-of-day reporting by providing an instant, cloud-synced application that managers use to record activities, while giving the owner a real-time, data-driven view of global business health.",
@@ -86,6 +94,13 @@ export const projects: Project[] = [
     client: 'Mr. Juldas',
     year: '2026',
     price: 'Flexible Pricing',
+    gallery: [
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564686/smartstock_tbgyi2.png',
+      'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1512428559083-a401c338e5a7?q=80&w=1200&auto=format&fit=crop'
+    ],
     details: {
       overview: "SmartStock is a state-of-the-art Business Management System (BMS) originally engineered for Mr. Juldas to solve complex inventory and branch synchronization challenges. Since its launch in 2026, it has evolved into a powerful public platform designed to empower businesses of all sizes—from micro-SMEs to large industrial operations—with absolute control over their stock, staff, and finances.",
       objective: "To deliver a high-performance, cross-platform solution (PWA) that replaces manual record-keeping with automated stock tracking, employee monitoring, and precise financial analytics including daily profit and loss statements.",
@@ -134,6 +149,13 @@ export const projects: Project[] = [
     client: 'Apeki Tumba TSS',
     year: '2025',
     price: 'Community Driven',
+    gallery: [
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564617/open_future_mbc6zl.png',
+      'https://images.unsplash.com/photo-1554224155-16974a420551?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1591115765373-520b7a05da82?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop'
+    ],
     details: {
       overview: "Open Future is a transformative financial literacy platform developed specifically for the savings group at Apeki Tumba TSS in Rulindo District. It eliminates outdated paper-based reporting by providing each member with a personal digital account to monitor their growth and contribute securely from anywhere.",
       objective: "To foster a culture of structured savings among students by providing an intuitive system that tracks the mandatory 5K RWF monthly contribution and provides visual feedback through goal-setting and target-progress tracking.",
