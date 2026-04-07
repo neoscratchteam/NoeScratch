@@ -32,7 +32,8 @@ export default function Projects() {
     'Logistics & Supply Chain', 
     'Media & Entertainment', 
     'E-commerce & Retail', 
-    'NGO & Development'
+    'NGO & Development',
+    'Portfolio'
   ];
 
   const filteredProjects = filter === 'All Projects' 
