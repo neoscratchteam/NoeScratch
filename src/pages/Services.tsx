@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
-import { Globe, Code, Palette, Lightbulb, Check, ArrowRight, Star, Monitor, Smartphone, GraduationCap, Zap } from 'lucide-react';
+import { Globe, Code, Palette, Lightbulb, Check, ArrowRight, Star, Monitor, Smartphone, GraduationCap, Zap, ShoppingCart, Layout, Database, Settings, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 
-const categories = ['All', 'Development', 'Education', 'Design', 'Strategy'];
+const categories = [
+  'All', 
+  'Development', 
+  'Education', 
+  'Design', 
+  'Strategy', 
+  'E-commerce', 
+  'Portfolio', 
+  'Mobile App', 
+  'Desktop App', 
+  'Database Migration', 
+  'Maintenance', 
+  'Update', 
+  'Domain Name'
+];
 
 const servicesData = [
   {
@@ -19,7 +33,7 @@ const servicesData = [
   },
   {
     id: 2,
-    category: 'Development',
+    category: 'Mobile App',
     icon: Smartphone,
     title: 'Mobile App Engineering',
     description: 'Native and cross-platform mobile applications that provide seamless user experiences across iOS and Android devices.',
@@ -29,8 +43,8 @@ const servicesData = [
   },
   {
     id: 7,
-    category: 'Development',
-    icon: Monitor,
+    category: 'Desktop App',
+    icon: Layout,
     title: 'Enterprise Desktop Apps',
     description: 'Modern, high-performance desktop applications for Windows, macOS, and Linux built with Electron and powerful native integrations.',
     features: ['Cross-platform compatible', 'Offline functionality', 'Auto-updates', 'Native System APIs'],
@@ -77,6 +91,66 @@ const servicesData = [
     price: 'Starting from 400,000 RWF',
     popular: false,
   },
+  {
+    id: 8,
+    category: 'E-commerce',
+    icon: ShoppingCart,
+    title: 'Modern E-commerce Stores',
+    description: 'High-converting online stores with secure payment integrations and advanced inventory management systems.',
+    features: ['Secure Checkout', 'Product Sync', 'Inventory Tools', 'Mobile First'],
+    price: 'Starting from 400,000 RWF',
+    popular: false,
+  },
+  {
+    id: 9,
+    category: 'Portfolio',
+    icon: Palette,
+    title: 'Creative Portfolio Design',
+    description: 'Showcase your work with stunning, high-performance portfolios designed to captivate a global audience.',
+    features: ['Visual Showcases', 'Smooth Motion', 'Contact Forms', 'SEO Optimized'],
+    price: 'Starting from 100,000 RWF',
+    popular: false,
+  },
+  {
+    id: 10,
+    category: 'Database Migration',
+    icon: Database,
+    title: 'Cloud Database Migration',
+    description: 'Secure and seamless migration of your business data to the cloud with zero downtime and full data integrity.',
+    features: ['Zero Downtime', 'Data Security', 'Schema Optimizaton', 'Cloud Hosting'],
+    price: 'Starting from 200,000 RWF',
+    popular: false,
+  },
+  {
+    id: 11,
+    category: 'Maintenance',
+    icon: Settings,
+    title: 'Professional Maintenance',
+    description: 'Ongoing technical support to ensure your platforms stay secure, updated, and performing at peak levels.',
+    features: ['24/7 Monitoring', 'Security Updates', 'Speed Optimization', 'Priority Help'],
+    price: 'Starting from 50,000 RWF/mo',
+    popular: false,
+  },
+  {
+    id: 12,
+    category: 'Update',
+    icon: RefreshCw,
+    title: 'Technical Updates',
+    description: 'Regular feature updates and bug fixes for your existing digital products to keep them modern and functional.',
+    features: ['Bug Fixes', 'New Features', 'Code Cleanup', 'Fast Updates'],
+    price: 'Starting from 30,000 RWF',
+    popular: false,
+  },
+  {
+    id: 13,
+    category: 'Domain Name',
+    icon: Globe,
+    title: 'Domain & Hosting Control',
+    description: 'Full management of your domain names and secure hosting servers with global CDN support.',
+    features: ['.RW / .COM Setup', 'SSL Certificates', 'Global Hosting', '24/7 Support'],
+    price: 'Starting from 15,000 RWF/yr',
+    popular: false,
+  },
 ];
 
 export default function Services() {
@@ -110,12 +184,12 @@ export default function Services() {
       {/* 🔍 FILTER BAR - Matches Project Page Experience */}
       <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center">
+          <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center overflow-x-auto pb-4 md:pb-0 hide-scrollbar">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-5 py-2 rounded-full text-[12px] font-bold transition-all duration-300 ${
+                className={`px-5 py-2 rounded-full text-[12px] whitespace-nowrap font-bold transition-all duration-300 ${
                   filter === cat 
                     ? 'bg-[#1a73e8] text-white shadow-lg shadow-blue-500/10' 
                     : 'bg-[#f4f7fa] text-[#555] hover:bg-[#e8ebf0]'
