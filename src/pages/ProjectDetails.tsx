@@ -89,7 +89,7 @@ const ProjectDetails = () => {
         <div className="grid lg:grid-cols-12 gap-16 mb-24">
           
           {/* Sidebar / Left Column */}
-          <div className="lg:col-span-3 space-y-12">
+          <div className="lg:col-span-3 space-y-12 lg:sticky lg:top-32 h-fit self-start">
             <div>
               <h3 className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-4">SERVICES</h3>
               <ul className="space-y-3">
