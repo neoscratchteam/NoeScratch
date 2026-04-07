@@ -151,10 +151,10 @@ export default function About() {
                   <div>
                     <span className="text-[9px] font-bold text-primary uppercase tracking-[0.2em] mb-4 block">FROM THE FOUNDER</span>
                     <h3 className="text-2xl font-bold mb-6 italic leading-relaxed text-foreground">
-                      "We don't just write code. We architect solutions that empower global businesses to think differently."
+                      "We don't simply write code; we architect the digital engines that empower global businesses to disrupt their industries and redefine what's possible."
                     </h3>
                     <p className="text-muted-foreground text-[13px] leading-relaxed font-semibold mb-6">
-                      Theogene Iradukunda leads NeoScratch with a vision for open-source technical excellence on a global scale. His focus is on ensuring every line of code we write contributes to the long-term scalability of our international clients.
+                      Theogene Iradukunda is the driving force behind NeoScratch, leading with a relentless vision for high-performance open-source excellence. His mission is to ensure that every architectural decision we make serves as a launchpad for the infinite scalability and global dominance of our world-class clients.
                     </p>
                     <div className="flex items-center gap-3">
                        <Button size="sm" className="rounded-full bg-[#0077b5] hover:bg-[#0077b5]/90 text-white font-bold h-9 px-6 text-[10px] tracking-widest shadow-xl shadow-blue-500/20" asChild>
