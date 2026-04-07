@@ -699,18 +699,9 @@ function Header() {
                             href: "/",
                             className: "flex items-center space-x-2 hover:opacity-75 transition-opacity duration-300",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-outfit text-xl md:text-2xl font-black tracking-tighter text-white uppercase flex items-center",
-                                children: [
-                                    "NEOSCRATCH",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "h-1.5 w-1.5 rounded-full bg-white/40 ml-1.5"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/layout/Header.tsx",
-                                        lineNumber: 59,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "font-outfit text-xl md:text-2xl font-black tracking-tighter text-white uppercase transition-colors",
+                                children: "NEOSCRATCH"
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/layout/Header.tsx",
                                 lineNumber: 58,
                                 columnNumber: 13
@@ -977,24 +968,15 @@ function Footer() {
                                         className: "inline-block group",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "font-outfit text-2xl font-black tracking-tighter text-white uppercase flex items-center group-hover:opacity-75 transition-opacity",
-                                                children: [
-                                                    "NEOSCRATCH",
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "h-1.5 w-1.5 rounded-full bg-white/40 ml-1.5"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/layout/Footer.tsx",
-                                                        lineNumber: 46,
-                                                        columnNumber: 29
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                                className: "font-outfit text-2xl font-black tracking-tighter text-white uppercase transition-all",
+                                                children: "NEOSCRATCH"
+                                            }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/Footer.tsx",
                                                 lineNumber: 45,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold -mt-1 group-hover:opacity-75 transition-opacity",
+                                                className: "text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold -mt-1 group-hover:text-white transition-colors",
                                                 children: "Technical Studio"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/Footer.tsx",

@@ -55,8 +55,8 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 hover:opacity-75 transition-opacity duration-300"
           >
-            <span className="font-outfit text-xl md:text-2xl font-black tracking-tighter text-white uppercase flex items-center">
-              NEOSCRATCH<span className="h-1.5 w-1.5 rounded-full bg-white/40 ml-1.5"></span>
+            <span className="font-outfit text-xl md:text-2xl font-black tracking-tighter text-white uppercase transition-colors">
+              NEOSCRATCH
             </span>
           </Link>
 
