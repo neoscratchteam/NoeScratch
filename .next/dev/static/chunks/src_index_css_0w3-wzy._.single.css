@@ -3691,6 +3691,12 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:scale-\[1\.04\]:hover {
+  --tw-scale-x: 1.04;
+  --tw-scale-y: 1.04;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:gap-2:hover {
   gap: .5rem;
 }
@@ -3714,6 +3720,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:border-primary\/20:hover {
   border-color: hsl(var(--primary) / .2);
+}
+
+.hover\:border-white\/60:hover {
+  border-color: #fff9;
 }
 
 .hover\:bg-\[\#0077b5\]\/90:hover {

@@ -84,16 +84,12 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button 
-              variant="outline"
-              size="sm" 
-              asChild 
-              className={`rounded-xl px-6 font-bold transition-all ${isHeaderThemed 
-                ? "bg-white text-primary border-white hover:bg-white/90" 
-                : "border-white text-white hover:bg-white hover:text-primary"}`}
+            <Link
+              href="/request-website"
+              className="inline-flex items-center justify-center px-6 py-2 rounded-xl text-sm font-bold bg-white text-primary border border-white transition-all duration-200 hover:bg-primary hover:text-white hover:border-white/60 hover:scale-[1.04] shadow-sm"
             >
-              <Link href="/request-website">Get Your Website</Link>
-            </Button>
+              Get Your Website
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
