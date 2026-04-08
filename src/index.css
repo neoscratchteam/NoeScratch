@@ -253,3 +253,11 @@
     transform: scale(1);
   }
 }
+@keyframes heroScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

@@ -57,72 +57,129 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       
-      {/* Full-Height Professional Hero Section */}
-      <section className="relative h-screen min-h-[700px] overflow-hidden bg-primary flex items-center">
-        {/* Sharp Small Square Grid Background */}
-        <div className="absolute inset-0 z-0 bg-grid opacity-[0.05] pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16 lg:pt-24 flex flex-col justify-center">
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Content */}
-            <div className="lg:col-span-7 animate-fade-in text-white space-y-6 pb-16">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-medium animate-slide-up">
-                <span>Software Development & Digital Marketing Studio — International Focus</span>
+      {/* ── Modern Hero ── */}
+      <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden bg-primary flex items-center">
+
+        {/* Radial glows */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%)' }} />
+          <div className="absolute top-1/2 -right-60 w-[400px] h-[400px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)' }} />
+        </div>
+
+        {/* Dot-grid */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+
+        {/* Grid lines */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* ── LEFT ── */}
+            <div className="space-y-5 animate-fade-in">
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-wide bg-white/10 border-white/20 text-white/80 animate-slide-up">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Software &amp; Growth Studio — Kigali, Rwanda
               </div>
-              
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.1] animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                We build software and get <br className="hidden md:block" /> your business <span className="text-white/70">found online.</span>
+
+              {/* Headline */}
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.08] tracking-tight text-white animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                We build software<br />
+                <span className="text-white/40">that grows your</span><br />
+                business.
               </h1>
-              
-              <p className="text-sm lg:text-base text-white/70 leading-relaxed max-w-xl font-light animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                From custom websites and powerful software to SEO and Google Business Profile setup — we give global businesses the digital tools they need to attract more customers and grow with confidence.
+
+              {/* Sub */}
+              <p className="text-sm lg:text-base leading-relaxed max-w-md text-white/70 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                Custom websites, apps, SEO, and Google Business Setup — everything your business needs to get found, look great, and convert visitors into customers.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 pt-2 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 rounded-xl px-10 shadow-lg transition-all font-bold" asChild>
-                  <Link href="/services">
-                    See What We Do
-                  </Link>
-                </Button>
-                <Button size="lg" className="bg-white/20 border-white/30 backdrop-blur-md text-white hover:bg-white/30 rounded-xl px-10 transition-all font-bold" asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+                <Link
+                  href="/request-website"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-sm bg-white text-primary shadow-lg hover:bg-white/90 transition-all duration-300 hover:scale-[1.03]"
+                >
+                  Start Your Project
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-sm bg-white/15 border border-white/25 text-white hover:bg-white/25 transition-all duration-300 hover:scale-[1.02]"
+                >
+                  View Our Work
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
               </div>
 
-              {/* Precise Stats Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-white/10 max-w-3xl animate-slide-up" style={{ animationDelay: '0.4s' }}>
-                <div ref={projectsCount.elementRef}>
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{projectsCount.count}</div>
-                  <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Projects delivered</p>
-                </div>
-                <div ref={experienceCount.elementRef} className="border-l border-white/10 pl-4">
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{experienceCount.count}</div>
-                  <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Years in business</p>
-                </div>
-                <div ref={clientsCount.elementRef} className="border-l border-white/10 pl-4">
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{clientsCount.count}</div>
-                  <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Happy clients</p>
-                </div>
-                <div ref={retentionCount.elementRef} className="border-l border-white/10 pl-4">
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-0.5">{retentionCount.count}</div>
-                  <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] font-bold">Client retention</p>
-                </div>
+              {/* Stats */}
+              <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                {[
+                  { ref: projectsCount.elementRef, val: projectsCount.count, label: 'Projects' },
+                  { ref: experienceCount.elementRef, val: experienceCount.count, label: 'Yrs Experience' },
+                  { ref: clientsCount.elementRef, val: clientsCount.count, label: 'Happy Clients' },
+                  { ref: retentionCount.elementRef, val: retentionCount.count, label: 'Retention' },
+                ].map((s, i) => (
+                  <div key={i} ref={s.ref} className="flex flex-col">
+                    <span className="text-xl font-extrabold text-white">{s.val}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest mt-0.5 text-white/40">{s.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Right Content - Mockup (Merged to Bottom) */}
-            <div className="lg:col-span-5 relative hidden lg:block self-end animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <div className="relative translate-x-12 translate-y-[2px]">
-                <div className="bg-white shadow-2xl border-l border-t border-white/10 transition-all duration-1000">
-                  <img 
-                    src={heroDashboard.src || heroDashboard} 
-                    alt="Professional Dashboard Mockup" 
-                    className="w-full h-auto grayscale-[15%] hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
+            {/* ── RIGHT: Vertical scrolling service cards ── */}
+            <div className="hidden lg:block relative h-[520px] overflow-hidden animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              {/* Top fade */}
+              <div className="absolute top-0 inset-x-0 h-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to bottom, hsl(221 83% 53%), transparent)' }} />
+              {/* Bottom fade */}
+              <div className="absolute bottom-0 inset-x-0 h-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to top, hsl(221 83% 53%), transparent)' }} />
+
+              {/* Scrolling track */}
+              <div style={{ animation: 'heroScrollUp 18s linear infinite' }} className="flex flex-col gap-4 will-change-transform">
+                {[
+                  { icon: Monitor, label: 'Website Design & Dev', desc: 'Up to 15 pages • Mobile first • Admin panel', color: 'hsl(221 83% 70%)' },
+                  { icon: Globe, label: 'Google Business Profile', desc: 'Google Maps • Verified listing • Local SEO', color: 'hsl(142 70% 55%)' },
+                  { icon: BarChart3, label: 'Search Engine Optimisation', desc: 'Keyword research • On-page SEO • Monthly reports', color: 'hsl(38 90% 60%)' },
+                  { icon: Code, label: 'Custom Software Dev', desc: 'Dashboards • Booking systems • Automations', color: 'hsl(280 70% 65%)' },
+                  { icon: Smartphone, label: 'Mobile App Development', desc: 'iOS & Android • React Native • Offline-first', color: 'hsl(200 90% 60%)' },
+                  { icon: Settings, label: 'Website Maintenance', desc: 'Monthly retainer • Content updates • Reports', color: 'hsl(0 70% 65%)' },
+                  /* duplicate for seamless loop */
+                  { icon: Monitor, label: 'Website Design & Dev', desc: 'Up to 15 pages • Mobile first • Admin panel', color: 'hsl(221 83% 70%)' },
+                  { icon: Globe, label: 'Google Business Profile', desc: 'Google Maps • Verified listing • Local SEO', color: 'hsl(142 70% 55%)' },
+                  { icon: BarChart3, label: 'Search Engine Optimisation', desc: 'Keyword research • On-page SEO • Monthly reports', color: 'hsl(38 90% 60%)' },
+                  { icon: Code, label: 'Custom Software Dev', desc: 'Dashboards • Booking systems • Automations', color: 'hsl(280 70% 65%)' },
+                  { icon: Smartphone, label: 'Mobile App Development', desc: 'iOS & Android • React Native • Offline-first', color: 'hsl(200 90% 60%)' },
+                  { icon: Settings, label: 'Website Maintenance', desc: 'Monthly retainer • Content updates • Reports', color: 'hsl(0 70% 65%)' },
+                ].map((s, i) => {
+                  const Icon = s.icon;
+                  const isCentre = i % 6 === 2; // highlight every 3rd card
+                  return (
+                    <div
+                      key={i}
+                      className={`flex items-center gap-4 rounded-2xl border transition-all duration-300 ${
+                        isCentre
+                          ? 'p-5 bg-white/20 border-white/30 shadow-xl scale-[1.03]'
+                          : 'p-4 bg-white/8 border-white/12 hover:bg-white/15'
+                      }`}
+                      style={{ background: isCentre ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.07)', borderColor: isCentre ? 'rgba(255,255,255,0.28)' : 'rgba(255,255,255,0.1)' }}
+                    >
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: `${s.color}22` }}>
+                        <Icon className="w-5 h-5" style={{ color: s.color }} />
+                      </div>
+                      <div>
+                        <p className="font-bold text-white text-sm leading-tight">{s.label}</p>
+                        <p className="text-white/50 text-xs mt-0.5 leading-snug">{s.desc}</p>
+                      </div>
+                      <ArrowUpRight className="w-4 h-4 text-white/30 ml-auto shrink-0" />
+                    </div>
+                  );
+                })}
               </div>
             </div>
+
           </div>
         </div>
       </section>
