@@ -35,7 +35,7 @@ export const projects: Project[] = [
     subtitle: 'for PixelMart LCD Rwanda',
     description: 'A robust multi-branch management platform for the electronics retail leader in Rwanda, featuring real-time stock tracking, heatmapped income analytics, and role-based employee control.',
     techStack: ['React', 'Node.js', 'Firebase', 'PWA'],
-    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775570257/pixelmart_dashboard_w9dam2.png',
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365356/Screenshot_2026-04-16_at_20.48.39_dutnuy.png',
     liveDemo: 'https://pixelmartrw.vercel.app',
     category: 'Inventory & ERP',
     tag: 'INVENTORY & ERP',
@@ -43,11 +43,11 @@ export const projects: Project[] = [
     year: '2025',
     price: 'Custom Enterprise',
     gallery: [
-      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775570257/pixelmart_dashboard_w9dam2.png',
-      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564616/pixelmartsold_yabygf.png',
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop'
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365356/Screenshot_2026-04-16_at_20.48.39_dutnuy.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365355/Screenshot_2026-04-16_at_20.48.57_ko6xnq.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365190/allsoldproducts_vxfnbt.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365185/addproduct_b6wkzc.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365185/dashboard_xuehsm.png'
     ],
     details: {
       overview: "PixelMart is a high-performance inventory and multi-branch management ecosystem designed specifically for PixelMart LCD Rwanda. It digitalizes the entire sales lifecycle of phone accessories—from screens to spare parts—across numerous physical locations, ensuring that all data flows into a unified administrative core.",
