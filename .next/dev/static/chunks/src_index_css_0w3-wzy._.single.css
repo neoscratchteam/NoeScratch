@@ -3722,10 +3722,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: hsl(var(--primary) / .2);
 }
 
-.hover\:border-white\/60:hover {
-  border-color: #fff9;
-}
-
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -3814,11 +3810,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: hsl(var(--warning) / .9);
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-white\/10:hover {
   background-color: #ffffff1a;
 }
@@ -3858,10 +3849,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:text-muted-foreground:hover {
   color: hsl(var(--muted-foreground));
-}
-
-.hover\:text-primary:hover {
-  color: hsl(var(--primary));
 }
 
 .hover\:text-primary-foreground:hover {
