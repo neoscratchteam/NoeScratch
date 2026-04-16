@@ -8,12 +8,10 @@ const staticPages: { path: string; priority: number; changeFrequency: MetadataRo
   { path: '/contact',          priority: 0.6,  changeFrequency: 'yearly' },
   { path: '/about',            priority: 0.8,  changeFrequency: 'monthly' },
   { path: '/projects',         priority: 0.8,  changeFrequency: 'weekly' },
-  { path: '/testimonials',     priority: 0.8,  changeFrequency: 'monthly' },
-  { path: '/partnerships',     priority: 0.7,  changeFrequency: 'monthly' },
+
   { path: '/events',           priority: 0.7,  changeFrequency: 'weekly' },
-  { path: '/blog',             priority: 0.8,  changeFrequency: 'daily' },
-  { path: '/join-us',          priority: 0.7,  changeFrequency: 'monthly' },
   { path: '/policy',           priority: 0.4,  changeFrequency: 'yearly' },
+
 ]
 
 

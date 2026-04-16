@@ -2179,10 +2179,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: hsl(var(--secondary) / .2);
 }
 
-.bg-secondary\/30 {
-  background-color: hsl(var(--secondary) / .3);
-}
-
 .bg-secondary\/40 {
   background-color: hsl(var(--secondary) / .4);
 }
@@ -2303,11 +2299,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .stroke-foreground {
   stroke: hsl(var(--foreground));
-}
-
-.object-contain {
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 
 .object-cover {
@@ -4002,10 +3993,6 @@ h1, h2, h3, h4, h5, h6 {
   --tw-ring-color: #1a73e81a;
 }
 
-.focus\:ring-primary:focus {
-  --tw-ring-color: hsl(var(--primary));
-}
-
 .focus\:ring-ring:focus {
   --tw-ring-color: hsl(var(--ring));
 }
@@ -4888,10 +4875,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 9rem;
   }
 
-  .sm\:w-auto {
-    width: auto;
-  }
-
   .sm\:max-w-md {
     max-width: 28rem;
   }
@@ -5085,10 +5068,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {
@@ -5405,11 +5384,6 @@ h1, h2, h3, h4, h5, h6 {
   .lg\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .lg\:py-36 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
   }
 
   .lg\:pb-20 {

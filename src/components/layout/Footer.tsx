@@ -7,9 +7,6 @@ import Image from 'next/image';
 const footerLinks = {
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Careers', href: '/join-us' },
-    { name: 'Partnerships', href: '/partnerships' },
   ],
   services: [
     { name: 'Web Development', href: '/services' },
@@ -18,10 +15,8 @@ const footerLinks = {
     { name: 'Tech Consulting', href: '/services' },
   ],
   resources: [
-    { name: 'Blog', href: '/blog' },
     { name: 'Events', href: '/events' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Privacy Policy', href: '/policy' },
   ],
 };
