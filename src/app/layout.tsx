@@ -88,9 +88,10 @@ export const metadata: Metadata = {
     ],
   },
   verification: {
-    google: 'google-site-verification-id', // User should replace this
+    google: 'pjqRx6vOATwVGOG40bPTTda9w0jyeg-OqLo_2sNlZM4',
   },
 };
+
 
 export default function RootLayout({
   children,
