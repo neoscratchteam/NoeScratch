@@ -9,11 +9,12 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const project = projects.find((p) => p.id === id);
+  const decodedId = decodeURIComponent(id);
+  const project = projects.find((p) => p.id === decodedId || p.id === id);
 
   if (!project) {
     return {
-      title: "Project Not Found | NeoScratch",
+      title: "Project Not Found",
     };
   }
 
