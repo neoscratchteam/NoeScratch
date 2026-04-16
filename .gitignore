@@ -12,21 +12,29 @@ lerna-debug.log*
 out/
 build/
 .vercel
+.turbo/
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencies
+node_modules/
+
+# Environment Variables
 .env
 .env.*
 .env.local
+!.env.example
+
+# OS Related
+.DS_Store
+Thumbs.db
+*.local
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
