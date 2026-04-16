@@ -23,7 +23,10 @@ export interface Project {
   price?: string;
   gallery?: string[];
   details?: ProjectDetails;
+  seoDescription: string;
+  seoKeywords: string[];
 }
+
 
 export const projects: Project[] = [
   {
@@ -79,8 +82,11 @@ export const projects: Project[] = [
       results: "PixelMart reduced reporting latency from 12 hours to less than 1 second. The owner now has exact financial oversight of every branch regardless of his physical location, leading to a much more stable and scalable operation.",
       conclusion: "PixelMart represents the global standard for modern retail automation in the electronics sector.",
       services: ["Software Development", "Retail Ecosystems", "Business Intelligence"]
-    }
+    },
+    seoDescription: "Explore PixelMart, the high-performance multi-branch inventory management platform for PixelMart LCD Rwanda. Featuring real-time stock tracking and analytics.",
+    seoKeywords: ["PixelMart Rwanda", "Inventory Management System", "Branch Reporting Software", "Faustin Hagenimana", "Retail ERP Rwanda"]
   },
+
   {
     id: 'smartstock',
     title: 'SmartStock — Ultimate Inventory & Business Management',
@@ -134,8 +140,11 @@ export const projects: Project[] = [
       results: "SmartStock has helped business owners achieve 100% financial transparency and reduce manual auditing time by up to 60%. It is now a trusted tool for industries ranging from retail shops to large factories.",
       conclusion: "SmartStock is the definitive proof of how a custom engineering solution can scale to become an industry-leading standard for digital transformation.",
       services: ["Business Automation", "Inventory Systems", "PWA Development", "Financial Analytics"]
-    }
+    },
+    seoDescription: "SmartStock is a state-of-the-art PWA for stock management and financial monitoring. Built for Juldas to solve complex branch synchronization challenges.",
+    seoKeywords: ["SmartStock Rwanda", "Business Management System", "PWA Stock Tracking", "Real-time Profit Loss Reporting", "Juldas SmartStock"]
   },
+
   {
     id: 'open-future-savings',
     title: 'Open Future — Student Micro-Savings & Fintech Platform',
@@ -185,6 +194,9 @@ export const projects: Project[] = [
       results: "Open Future has fundamentally changed how the group operates, increasing member contribution consistency and trust. The finance administrator now handles audits in seconds rather than hours of manual calculation.",
       conclusion: "Open Future is more than an app; it is a financial empowerment tool for the next generation of engineers and entrepreneurs in Rulindo.",
       services: ["Community FinTech", "Finacial Literacy Tools", "Custom Web Development"]
-    }
+    },
+    seoDescription: "Discover Open Future, a fintech platform enabling student micro-savings at Apeki Tumba TSS. Digital ledgers and goal-based saving for Rulindo District.",
+    seoKeywords: ["Open Future Savings", "Student Fintech Rwanda", "Apeki Tumba SACCO", "Rulindo Community Savings", "Student Micro-savings Platform"]
   }
+
 ];

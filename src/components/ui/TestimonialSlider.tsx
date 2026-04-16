@@ -75,10 +75,11 @@ export function TestimonialSlider() {
               <button 
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`relative rounded-full transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex-shrink-0 cursor-pointer hover:opacity-100 ${sizeClass} ${opacityClass} ${yOffset} ${ringClass}`}
+                className={`relative rounded-full transition-all duration-700 ease-&lsqb;cubic-bezier(0.16,1,0.3,1)&rsqb; flex-shrink-0 cursor-pointer hover:opacity-100 ${sizeClass} ${opacityClass} ${yOffset} ${ringClass}`}
               >
                 <img src={t.avatar} alt={t.name} className="w-full h-full rounded-full object-cover" />
               </button>
+
             );
           })}
         </div>

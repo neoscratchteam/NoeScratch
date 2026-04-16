@@ -31,39 +31,59 @@ export const metadata: Metadata = {
   },
 };
 
-const servicesJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'NeoScratch Digital Services',
-  description: 'Professional digital services for businesses in Rwanda and worldwide',
-  url: 'https://neoscratch.com/services',
-  itemListElement: [
-    {
-      '@type': 'ListItem', position: 1,
-      item: { '@type': 'Service', name: 'Website Design & Development', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'Professional, mobile-first websites with up to 15 pages, admin panel, and fast delivery.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
+const servicesJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Website Design & Development',
+    provider: { '@type': 'Organization', name: 'NeoScratch' },
+    description: 'Professional, mobile-first websites with up to 15 pages, admin panel, and fast delivery.',
+    offers: {
+      '@type': 'Offer',
+      price: '150000',
+      priceCurrency: 'RWF',
+      description: 'Starting from 150,000 RWF for Business Websites',
     },
-    {
-      '@type': 'ListItem', position: 2,
-      item: { '@type': 'Service', name: 'Google Business Profile Setup', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'Complete Google Business Profile setup with Google Maps listing, verified account, and local SEO for Rwanda.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
+    areaServed: 'RW',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Mobile App Engineering',
+    provider: { '@type': 'Organization', name: 'NeoScratch' },
+    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    offers: {
+      '@type': 'Offer',
+      price: '800000',
+      priceCurrency: 'RWF',
+      description: 'Starting from 800,000 RWF',
     },
-    {
-      '@type': 'ListItem', position: 3,
-      item: { '@type': 'Service', name: 'Search Engine Optimisation (SEO)', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'Keyword research, on-page SEO, Google Search Console setup, and monthly reports for ranking on Google.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
-    },
-    {
-      '@type': 'ListItem', position: 4,
-      item: { '@type': 'Service', name: 'Mobile App Development', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'iOS and Android app development using React Native with offline-first architecture.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
-    },
-    {
-      '@type': 'ListItem', position: 5,
-      item: { '@type': 'Service', name: 'Custom Software Development', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'Custom dashboards, booking systems, and business automations built to your exact requirements.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
-    },
-    {
-      '@type': 'ListItem', position: 6,
-      item: { '@type': 'Service', name: 'Website Maintenance & Management', provider: { '@type': 'Organization', name: 'NeoScratch' }, description: 'Monthly website maintenance retainers with content updates, security, SEO monitoring, and reports.', url: 'https://neoscratch.com/services', areaServed: 'RW' }
-    },
-  ],
-};
+    areaServed: 'RW',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How long does it take to build a website with NeoScratch?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most business websites are delivered within 1 to 3 weeks, depending on complexity.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer website maintenance and updates?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we offer professional maintenance retainers starting from 50,000 RWF/mo, including security updates and speed optimization.',
+        },
+      },
+    ],
+  },
+];
+
 
 export default function Page() {
   return (

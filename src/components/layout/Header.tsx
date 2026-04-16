@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Code, MessageCircle } from 'lucide-react';
 
+import Image from 'next/image';
+
 interface NavigationItem {
   name: string;
   href: string;
@@ -55,11 +57,15 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 hover:opacity-75 transition-opacity duration-300"
           >
-            <img 
+            <Image 
               src="/logo.svg" 
-              className="h-6 md:h-8 hover:opacity-90 transition-opacity" 
+              width={160}
+              height={32}
+              className="h-6 md:h-8 w-auto hover:opacity-90 transition-opacity" 
               alt="NEOSCRATCH Logo" 
+              priority
             />
+
           </Link>
 
           {/* Desktop Navigation */}

@@ -9,6 +9,7 @@ import {
   Search, ShieldCheck, Settings, BarChart3,
   Monitor
 } from 'lucide-react';
+import Image from 'next/image';
 import { useCountUpAnimation } from '@/hooks/useCountUpAnimation';
 import { TestimonialSlider } from '@/components/ui/TestimonialSlider';
 import heroDashboard from '@/assets/professional-dashboard.png';
@@ -301,11 +302,14 @@ export default function Index() {
               >
                 {/* Image Section - FULL FILL */}
                 <div className="lg:w-[65%] h-[50%] lg:h-full bg-secondary overflow-hidden relative">
-                  <img 
+                  <Image 
                     src={p.image} 
                     alt={p.title} 
+                    fill
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"
+                    sizes="(max-width: 768px) 85vw, 65vw"
                   />
+
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
                   <div className="absolute top-4 left-4 flex space-x-2">
                     <span className="px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-primary text-[9px] font-bold tracking-wider shadow-sm">{p.tag}</span>

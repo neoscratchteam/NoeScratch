@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import Image from 'next/image';
 
 const footerLinks = {
   company: [
@@ -43,11 +44,14 @@ export function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-8">
               <Link href="/" className="inline-block group">
-                <img 
+                <Image 
                   src="/logo.svg" 
-                  className="h-8 md:h-10 hover:opacity-90 transition-opacity" 
+                  width={200}
+                  height={40}
+                  className="h-8 md:h-10 w-auto hover:opacity-90 transition-opacity" 
                   alt="NEOSCRATCH Logo" 
                 />
+
               </Link>
               
               <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium">

@@ -75,7 +75,7 @@ export function ProjectStickyStack() {
                                 <img 
                                     src={project.image} 
                                     alt={project.title} 
-                                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" 
+                                    className="w-full h-full object-cover transition-transform duration-&lsqb;2s&rsqb; group-hover:scale-110" 
                                 />
                                 {!isActive && <div className="absolute inset-0 bg-black/20" />}
                             </div>

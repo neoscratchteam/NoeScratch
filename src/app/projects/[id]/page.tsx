@@ -19,14 +19,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.title} | Case Study | NeoScratch`,
-    description: project.description,
-    keywords: [...project.techStack, project.category, "NeoScratch case study", "software development Rwanda"],
+    description: project.seoDescription,
+    keywords: [...project.seoKeywords, ...project.techStack, project.category, "NeoScratch case study", "software development Rwanda"],
     alternates: {
       canonical: `https://neoscratch.com/projects/${id}`,
     },
     openGraph: {
       title: `${project.title} | NeoScratch Case Study`,
-      description: project.description,
+      description: project.seoDescription,
       url: `https://neoscratch.com/projects/${id}`,
       type: 'article',
       images: [
@@ -41,10 +41,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: `${project.title} | NeoScratch Case Study`,
-      description: project.description,
+      description: project.seoDescription,
       images: [project.image],
     },
   };
+
 
 }
 
