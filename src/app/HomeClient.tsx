@@ -51,9 +51,10 @@ export default function Index() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const displayedProjects = projects.slice(0, 4);
   const cardWidth = 85; 
   const gapWidth = 5;  
-  const translateX = -scrollProgress * (cardWidth + gapWidth) * (projects.length - 1);
+  const translateX = -scrollProgress * (cardWidth + gapWidth) * (displayedProjects.length - 1);
 
   return (
     <div className="min-h-screen">
@@ -294,7 +295,7 @@ export default function Index() {
               transform: `translate3d(${translateX.toFixed(2)}vw, 0px, 0px)`
             }}
           >
-            {projects.map((p) => (
+            {displayedProjects.map((p) => (
               <Link 
                 key={p.id}
                 href={`/projects/${p.id}`}
