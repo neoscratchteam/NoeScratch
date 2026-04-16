@@ -93,7 +93,7 @@ export const projects: Project[] = [
     subtitle: 'for Juldas',
     description: 'A professional PWA-based stock management system that tracks inventory, branches, employees, and full financial performance with real-time profit and loss reporting.',
     techStack: ['React', 'MongoDB', 'Tailwind CSS', 'PWA'],
-    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564686/smartstock_tbgyi2.png',
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365807/Screenshot_2026-04-16_at_20.54.03_e6t6ir.png',
     liveDemo: 'https://smartstock.rw/',
     category: 'Business Automation',
     tag: 'INVENTORY & ERP',
@@ -101,11 +101,11 @@ export const projects: Project[] = [
     year: '2026',
     price: 'Flexible Pricing',
     gallery: [
-      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564686/smartstock_tbgyi2.png',
-      'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1512428559083-a401c338e5a7?q=80&w=1200&auto=format&fit=crop'
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365829/Screenshot_2026-04-16_at_20.54.15_snugfy.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365817/Screenshot_2026-04-16_at_20.55.19_o9yjuj.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365810/Screenshot_2026-04-16_at_20.56.15_owwqpy.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365807/Screenshot_2026-04-16_at_20.54.03_e6t6ir.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365942/Screenshot_2026-04-16_at_20.58.40_v2pcx5.png'
     ],
     details: {
       overview: "SmartStock is a state-of-the-art Business Management System (BMS) originally engineered for Mr. Juldas to solve complex inventory and branch synchronization challenges. Since its launch in 2026, it has evolved into a powerful public platform designed to empower businesses of all sizes—from micro-SMEs to large industrial operations—with absolute control over their stock, staff, and finances.",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     subtitle: 'for students at Apeki Tumba TSS',
     description: 'A dedicated community savings platform for students in Rulindo District, providing transparent digital ledgers, target-based saving encouragement, and online deposit tracking.',
     techStack: ['React', 'Firebase', 'TypeScript', 'Tailwind CSS'],
-    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564617/open_future_mbc6zl.png',
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366290/Screenshot_2026-04-16_at_21.01.15_v3rolu.png',
     liveDemo: 'https://openfuture.pages.dev',
     category: 'FinTech & Education',
     tag: 'COMMUNITY FINTECH',
@@ -159,11 +159,11 @@ export const projects: Project[] = [
     year: '2025',
     price: 'Community Driven',
     gallery: [
-      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1775564617/open_future_mbc6zl.png',
-      'https://images.unsplash.com/photo-1554224155-16974a420551?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1591115765373-520b7a05da82?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1200&auto=format&fit=crop'
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366290/Screenshot_2026-04-16_at_21.01.15_v3rolu.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366283/Screenshot_2026-04-16_at_21.01.41_zmznpk.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366208/Screenshot_2026-04-16_at_21.02.16_b8e8ow.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366205/Screenshot_2026-04-16_at_21.02.00_x9yl4k.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366204/Screenshot_2026-04-16_at_21.02.31_klniwz.png'
     ],
     details: {
       overview: "Open Future is a transformative financial literacy platform developed specifically for the savings group at Apeki Tumba TSS in Rulindo District. It eliminates outdated paper-based reporting by providing each member with a personal digital account to monitor their growth and contribute securely from anywhere.",
