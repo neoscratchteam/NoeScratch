@@ -17,6 +17,9 @@ import heroDashboard from '@/assets/professional-dashboard.png';
 import { projects } from '@/data/projects';
 
 export default function Index() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
   const projectsCount = useCountUpAnimation({ end: 6, suffix: '+' });
   const experienceCount = useCountUpAnimation({ end: 2, suffix: '+' });
   const clientsCount = useCountUpAnimation({ end: 6, suffix: '+' });
@@ -140,8 +143,8 @@ export default function Index() {
               <div className="absolute bottom-0 inset-x-0 h-24 z-10 pointer-events-none" style={{ background: 'linear-gradient(to top, hsl(221 83% 53%), transparent)' }} />
 
               {/* static services track */}
-              <div className="flex flex-col gap-4" suppressHydrationWarning>
-                {[
+              <div className="flex flex-col gap-4">
+                {mounted && [
                   { icon: Monitor, label: 'Website Design & Dev', desc: 'Up to 15 pages • Mobile first • Admin panel', color: 'hsl(221 83% 70%)' },
                   { icon: Globe, label: 'Google Business Profile', desc: 'Google Maps • Verified listing • Local SEO', color: 'hsl(142 70% 55%)' },
                   { icon: BarChart3, label: 'Search Engine Optimisation', desc: 'Keyword research • On-page SEO • Monthly reports', color: 'hsl(38 90% 60%)' },

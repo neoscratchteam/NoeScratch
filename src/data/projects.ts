@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     id: 'oluxy-digital-boutique',
     title: 'Oluxy Watches — The Art of Rwandan Elegance',
-    subtitle: 'for Mr. Jean Baptiste (Oluxy Luxury)',
+    subtitle: 'for Mr. Jean Baptiste (Oluxy Watches)',
     description: 'A cinematic high-end e-commerce platform for Kigali\'s premier timepiece destination, featuring a professional product immersion engine and seamless heritage-driven storytelling.',
     techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776628329/hero2_dtp7ly.png',
@@ -50,8 +50,6 @@ export const projects: Project[] = [
       'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776628301/addtocart_fsphwy.png'
     ],
     details: {
-      overview: "Oluxy Watches was created to redefine access to true elegance. Born from a passion for fine timepieces, the brand was built for those who see a watch as more than timekeeping — it is a statement of identity, ambition, and success. Today, Oluxy stands for modern luxury, crafted for individuals who appreciate detail, presence, and legacy.",
-      objective: "To deliver refined luxury through timepieces that reflect prestige, precision, and timeless elegance. We curated an exceptional digital experience for individuals who value quality, distinction, and presence — delivering not just products, but a sophisticated experience defined by trust and excellence.",
       delivered: [
         "Cinematic Product Discovery Engine",
         "Interactive Luxury Timepiece Collections",
@@ -86,7 +84,7 @@ export const projects: Project[] = [
   {
     id: 'oluxy-luxury-dashboard',
     title: 'Oluxy — Premium Watches E-Commerce & Retail Dashboard',
-    subtitle: 'for Mr. Jean Baptiste (GF Plaza)',
+    subtitle: 'for Mr. Jean Baptiste (Oluxy Watches)',
     description: 'A high-end retail management system engineered for Rwanda\'s premier luxury watch boutique, delivering a centralized "all-in-one" dashboard for tracking prestigious products, orders, and elite brands.',
     techStack: ['React', 'Python 3', 'FastAPI', 'Tailwind CSS'],
     image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776367659/Screenshot_2026-04-15_at_14.31.26_yly1g3.png',

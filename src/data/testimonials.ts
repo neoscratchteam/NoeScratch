@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     name: 'Mr. Jean Baptiste',
-    role: 'Owner, Oluxy Luxury Watches',
+    role: 'Business Owner, Oluxy Watches',
     serviceType: 'Luxury E-Commerce & Retail ERP',
     link: 'https://oluxywatches.com',
     content: 'NeoScratch redefined our digital presence. They didn\'t just build a website; they captured the essence of local luxury and precision. Our digital boutique is now as prestigious as our physical showroom.',
