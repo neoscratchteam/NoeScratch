@@ -82,6 +82,59 @@ export const projects: Project[] = [
   },
 
   {
+    id: 'oluxy-wear-platform',
+    title: 'Oluxy Wear — Elite Eyewear & Fashion Statement',
+    subtitle: 'for Mr. Jean Baptiste (Oluxy Wear)',
+    description: 'A high-end dedicated e-commerce platform for Oluxy Wear, focusing on premium eyewear and luxury fashion accessories with a cinematic shopping experience.',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759377/oluxywearhome_qwwdo2.png',
+    liveDemo: 'https://oluxywear.com',
+    category: 'E-Commerce & Branding',
+    tag: 'E-COMMERCE & FASHION',
+    client: 'Mr. Jean Baptiste',
+    year: 'Apr 21, 2026',
+    price: 'Platform Pricing',
+    gallery: [
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759377/oluxywearhome_qwwdo2.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759361/oluxywearproductshowccase_adm7kn.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759363/oluxywaerbrandshowcase_wihfua.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759361/oluywearproducts_sfpgwq.png',
+      'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759363/oluxywearaddtocat_l5xsip.png'
+    ],
+    details: {
+      delivered: [
+        "Premium Eyewear Selection Engine",
+        "Interactive Fashion Brand Showcase",
+        "Seamless Add-to-Cart & Checkout Workflow",
+        "Mobile-First Product Discovery",
+        "VIP Fashion Consultation Integration",
+        "Automated Luxury Inventory Sync",
+        "Signature Rwandan Style Storyboarding"
+      ],
+      process: [
+        {
+          title: "Fashion Identity Mapping",
+          description: "Translated Oluxy's physical fashion elegance into a digital storefront that breathes luxury and sophistication."
+        },
+        {
+          title: "Visual Merchandising",
+          description: "Curated a high-fidelity image gallery and transitions to highlight the intricate details of premium eyewear."
+        },
+        {
+          title: "Conversion Optimization",
+          description: "Refined the 'Add to Cart' and product showcase modules to maximize user engagement and sales velocity."
+        }
+      ],
+      results: "The Oluxy Wear platform launched today, providing a dedicated digital ecosystem for Oluxy's eyewear and fashion expansion, significantly increasing their market reach.",
+      conclusion: "Oluxy Wear sets the new benchmark for luxury fashion e-commerce in the East African region.",
+      services: ["Fashion E-Commerce", "Branding", "UI/UX Design", "Performance Engineering"]
+    },
+    seoDescription: "Explore Oluxy Wear — Kigali's premier destination for luxury eyewear and premium fashion accessories. Official platform launched.",
+    seoKeywords: ["Oluxy Wear", "Luxury Eyewear Rwanda", "Kigali Fashion Shop", "Premium Glasses Kigali", "Oluxy Boutique"]
+  },
+
+
+  {
     id: 'oluxy-premium-dashboard',
     title: 'Oluxy — Premium Watches E-Commerce & Retail Dashboard',
     subtitle: 'for Mr. Jean Baptiste (Oluxy Watches)',

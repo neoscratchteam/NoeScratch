@@ -49,25 +49,25 @@ export function Footer() {
 
               </Link>
               
-              <p className="text-white/60 text-sm leading-relaxed max-w-sm font-medium">
+              <p className="text-white text-sm leading-relaxed max-w-sm font-medium">
                 Empowering global businesses through high-performance software engineering and digital transformation. Based in Kigali, serving the world.
               </p>
               
               <div className="space-y-4 pt-4 border-t border-white/5">
-                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
-                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                <div className="flex items-center space-x-4 text-sm text-white group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/60 group-hover:text-white transition-colors">
                     <MapPin className="h-4 w-4" />
                   </div>
                   <span className="font-semibold tracking-wide">Kigali, Rwanda</span>
                 </div>
-                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
-                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                <div className="flex items-center space-x-4 text-sm text-white group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/60 group-hover:text-white transition-colors">
                     <Phone className="h-4 w-4" />
                   </div>
                   <span className="font-semibold tracking-wide">+250 792 734 752</span>
                 </div>
-                <div className="flex items-center space-x-4 text-sm text-white/70 group cursor-default">
-                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                <div className="flex items-center space-x-4 text-sm text-white group cursor-default">
+                  <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-white/60 group-hover:text-white transition-colors">
                     <Mail className="h-4 w-4" />
                   </div>
                   <span className="font-semibold tracking-wide">customerservice@neoscratch.com</span>
@@ -77,7 +77,7 @@ export function Footer() {
 
             {/* Footer Links - Refined Typography */}
             <div>
-              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+              <h3 className="text-[11px] font-black text-white/80 uppercase tracking-[0.3em] mb-8">
                 Capabilities
               </h3>
               <ul className="space-y-4">
@@ -85,7 +85,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
+                      className="text-sm font-bold text-white hover:text-white transition-all hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -95,7 +95,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+              <h3 className="text-[11px] font-black text-white/80 uppercase tracking-[0.3em] mb-8">
                 Network
               </h3>
               <ul className="space-y-4">
@@ -103,7 +103,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
+                      className="text-sm font-bold text-white hover:text-white transition-all hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -113,7 +113,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-[11px] font-black text-white/30 uppercase tracking-[0.3em] mb-8">
+              <h3 className="text-[11px] font-black text-white/80 uppercase tracking-[0.3em] mb-8">
                 Knowledge
               </h3>
               <ul className="space-y-4">
@@ -121,7 +121,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm font-bold text-white/60 hover:text-white transition-all hover:translate-x-1 inline-block"
+                      className="text-sm font-bold text-white hover:text-white transition-all hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -153,7 +153,7 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-white/20 hover:text-white transition-colors"
+                  className="text-white/60 hover:text-white transition-colors"
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
