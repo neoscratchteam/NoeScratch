@@ -184,8 +184,8 @@ export default function RootLayout({
     {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      'name': 'Featured Projects by NeoScratch',
-      'description': 'A collection of high-end digital platforms engineered for global impact.',
+      'name': 'Full Project Portfolio by NeoScratch',
+      'description': 'A comprehensive collection of high-performance digital solutions engineered for global impact.',
       'itemListElement': [
         {
           '@type': 'ListItem',
@@ -212,9 +212,49 @@ export default function RootLayout({
           'position': 3,
           'item': {
             '@type': 'CreativeWork',
+            'name': 'Oluxy Dashboard - Retail ERP',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776367659/Screenshot_2026-04-15_at_14.31.26_yly1g3.png',
+            'description': 'All-in-one retail management command center for high-value inventory.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'item': {
+            '@type': 'CreativeWork',
             'name': 'FinTrack - Wealth Management',
             'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366728/Screenshot_2026-04-16_at_21.03.39_fpyf50.png',
             'description': 'Strategic personal finance engine and risk analytics command center.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 5,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'SmartStock - Inventory BMS',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365807/Screenshot_2026-04-16_at_20.54.03_e6t6ir.png',
+            'description': 'Advanced stock management and multi-branch synchronization platform.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 6,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'PixelMart - Multi-Branch ERP',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776365356/Screenshot_2026-04-16_at_20.48.39_dutnuy.png',
+            'description': 'Real-time sales and inventory tracking system for multi-location electronics retail.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 7,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'Open Future - Savings Fintech',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366290/Screenshot_2026-04-16_at_21.01.15_v3rolu.png',
+            'description': 'Community-driven student financial literacy and micro-savings platform.'
           }
         }
       ]
