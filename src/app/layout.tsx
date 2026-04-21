@@ -103,8 +103,10 @@ export default function RootLayout({
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
       name: 'NeoScratch',
-      description: 'Professional web design, mobile app development, SEO, and Google Business Profile setup for businesses in Rwanda and worldwide.',
-      image: 'https://neoscratch.com/preview.png',
+      alternateName: 'NeoScratch Rwanda',
+      description: 'NeoScratch is Rwanda\'s premier digital engineering studio. We specialize in high-end web design, mobile app development (iOS & Android), SEO, and strategic Google Business Profile management.',
+      image: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776629743/oluxywatchesmainlogo_tmsurb.png',
+      logo: 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776629743/oluxywatchesmainlogo_tmsurb.png',
       '@id': 'https://neoscratch.com/#organization',
       url: 'https://neoscratch.com',
       telephone: '+250792734752',
@@ -112,7 +114,7 @@ export default function RootLayout({
       priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Kigali',
+        streetAddress: 'GF Plaza, Kigali City Tower Area',
         addressLocality: 'Kigali',
         addressRegion: 'Kigali Province',
         postalCode: '0000',
@@ -129,25 +131,23 @@ export default function RootLayout({
         { '@type': 'Country', name: 'Kenya' },
         { '@type': 'Country', name: 'USA' },
         { '@type': 'Country', name: 'UK' },
-        { '@type': 'AdministrativeArea', name: 'East Africa' },
+        { '@type': 'Country', name: 'Canada' },
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Digital Services',
+        name: 'NeoScratch Digital Solutions',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Search Engine Optimisation (SEO)' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile Setup' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Software Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Maintenance & Management' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury Website Design & Development', description: 'Custom-built, high-performance websites optimized for conversion and speed.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Premium Mobile App Development', description: 'Cross-platform iOS and Android apps with elite UI/UX.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Strategic SEO & Growth', description: 'Ranking your business #1 on Google with data-driven SEO strategies.' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile Management', description: 'Optimizing your local presence to attract more walk-in and online customers.' } },
         ],
       },
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
         opens: '08:00',
-        closes: '18:00'
+        closes: '20:00'
       },
       sameAs: [
         'https://www.x.com/theo_dev_rw',
@@ -161,14 +161,63 @@ export default function RootLayout({
       '@type': 'WebSite',
       '@id': 'https://neoscratch.com/#website',
       url: 'https://neoscratch.com',
-      name: 'NeoScratch',
-      description: 'Web Design, Mobile Apps, SEO & Google Business Profile Setup in Rwanda',
+      name: 'NeoScratch | Elite Digital Engineering',
+      description: 'Web Design, Mobile Apps, and SEO Services in Kigali, Rwanda.',
       publisher: { '@id': 'https://neoscratch.com/#organization' },
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://neoscratch.com/services?q={search_term_string}',
+        target: 'https://neoscratch.com/projects?q={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://neoscratch.com' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Projects', 'item': 'https://neoscratch.com/projects' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Services', 'item': 'https://neoscratch.com/services' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'About Us', 'item': 'https://neoscratch.com/about' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'Contact', 'item': 'https://neoscratch.com/contact' }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Featured Projects by NeoScratch',
+      'description': 'A collection of high-end digital platforms engineered for global impact.',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'Oluxy Wear - Elite Eyewear Store',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/v1776759377/oluxywearhome_qwwdo2.png',
+            'description': 'A premium eyewear e-commerce platform with cinematic product discovery.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'Oluxy Watches - Heritage Platform',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776628329/hero2_dtp7ly.png',
+            'description': 'Kigali\'s premier timepiece destination digital platform.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': 'FinTrack - Wealth Management',
+            'image': 'https://res.cloudinary.com/dhjdtt7rj/image/upload/q_auto/f_auto/v1776366728/Screenshot_2026-04-16_at_21.03.39_fpyf50.png',
+            'description': 'Strategic personal finance engine and risk analytics command center.'
+          }
+        }
+      ]
     }
   ];
 
