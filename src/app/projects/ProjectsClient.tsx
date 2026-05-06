@@ -64,13 +64,18 @@ export default function Projects() {
         </section>
 
         {/* 🔍 FILTER BAR - Pill Buttons */}
-        <section className="py-12 border-b border-border/40 sticky top-[72px] bg-white z-40">
+        <section className="py-12 border-b border-border/40 sticky top-16 lg:top-20 bg-white z-40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center gap-3 justify-start md:justify-center">
               {dynamicCategories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => handleFilterChange(cat)}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleFilterChange(cat);
+                  }}
                   className={`px-5 py-2 rounded-full text-[12px] font-bold transition-all duration-300 ${
                     filter === cat 
                       ? 'bg-[#1a73e8] text-white shadow-lg shadow-blue-500/10' 
@@ -134,7 +139,12 @@ export default function Projects() {
             {/* ⬆️ BACK TO TOP OF SECTION */}
             <div className="mt-16 flex justify-center border-t border-border/40 pt-12">
                <button 
-                 onClick={() => handleFilterChange(filter)}
+                 type="button"
+                 onClick={(e) => {
+                   e.preventDefault();
+                   e.stopPropagation();
+                   handleFilterChange(filter);
+                 }}
                  className="inline-flex items-center text-[10px] font-bold text-muted-foreground hover:text-[#1a73e8] uppercase tracking-[0.3em] transition-all group"
                >
                  Back to Filters <ArrowRight className="ml-2 h-3.5 w-3.5 -rotate-90 group-hover:-translate-y-1 transition-transform" />
