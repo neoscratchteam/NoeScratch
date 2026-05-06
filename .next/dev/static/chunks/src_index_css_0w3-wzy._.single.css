@@ -824,6 +824,10 @@ img {
   margin-top: auto;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .line-clamp-2 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -5228,6 +5232,10 @@ img {
 
   .lg\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .lg\:mr-12 {
+    margin-right: 3rem;
   }
 
   .lg\:block {
