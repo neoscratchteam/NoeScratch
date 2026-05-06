@@ -31,7 +31,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-primary text-white border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-none ml-[3px] px-2">
         {/* Main Footer Content */}
         <div className="py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
@@ -40,7 +40,7 @@ export function Footer() {
             <div className="lg:col-span-2 space-y-8">
               <Link href="/" className="inline-block group">
                 <Image 
-                  src="/logo.svg" 
+                  src="/logo.png" 
                   width={200}
                   height={40}
                   className="h-8 md:h-10 w-auto hover:opacity-90 transition-opacity" 
