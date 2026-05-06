@@ -64,19 +64,33 @@ export default function Index() {
     <div className="min-h-screen">
       
       {/* ── Modern Hero ── */}
-      <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden bg-primary flex items-center">
+      <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden flex items-center">
+        
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/kigalihero.jpg"
+            alt="Kigali City Skyline"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay - Darker for readability */}
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent" />
+        </div>
 
         {/* Radial glows */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%)' }} />
           <div className="absolute top-1/2 -right-60 w-[400px] h-[400px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)' }} />
         </div>
 
         {/* Dot-grid */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.05] z-0" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
         {/* Grid lines */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.04] z-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

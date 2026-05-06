@@ -2254,6 +2254,10 @@ img {
   background-color: #fffffff2;
 }
 
+.bg-primary\/95 {
+  background-color: hsl(var(--primary) / .95);
+}
+
 .bg-\[radial-gradient\(circle_at_center\,_var\(--primary\)_0\%\,_transparent_50\%\)\] {
   background-image: radial-gradient(circle at center, var(--primary) 0%, transparent 50%);
 }
@@ -2299,6 +2303,12 @@ img {
 .from-white {
   --tw-gradient-from: #fff var(--tw-gradient-from-position);
   --tw-gradient-to: #fff0 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary\/40 {
+  --tw-gradient-from: hsl(var(--primary) / .4) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2510,6 +2520,11 @@ img {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .pb-0 {
