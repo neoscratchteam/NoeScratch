@@ -23,7 +23,7 @@ const footerLinks = {
 
 const socialLinks = [
   { name: 'Twitter', href: 'https:///www.x.com/theo_dev_rw', icon: Twitter },
-  { name: 'Instagram', href: 'https://www.instagram.com/neoscratch/', icon: Instagram },
+  { name: 'Instagram', href: 'https://www.instagram.com/neoscratchltd/', icon: Instagram },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/theogene-iradukunda-88b07a381/', icon: Linkedin },
   { name: 'GitHub', href: 'https://github.com/theodevrwanda', icon: Github },
 ];
