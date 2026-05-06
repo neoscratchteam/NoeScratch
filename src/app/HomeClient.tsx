@@ -13,7 +13,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useCountUpAnimation } from '@/hooks/useCountUpAnimation';
 import { TestimonialSlider } from '@/components/ui/TestimonialSlider';
-import heroDashboard from '@/assets/professional-dashboard.png';
 
 import { projects } from '@/data/projects';
 
