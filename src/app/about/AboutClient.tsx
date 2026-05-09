@@ -60,11 +60,11 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: 'Sarah Chen',
-    role: 'Lead Designer',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop',
-    bio: 'Passionate about creating intuitive, beautiful interfaces that deliver exceptional user experiences.',
-    socials: { email: 'sarah@neoscratch.com', whatsapp: '250792734752', instagram: 'https://instagram.com/sarahchen' }
+    name: 'Jeanne Uwizeyimana',
+    role: 'Idealist',
+    image: '/jeann.webp',
+    bio: 'Dedicated to conceptualizing innovative ideas that drive positive change and push the boundaries of digital creation.',
+    socials: { email: 'jeanne@neoscratch.com', whatsapp: '250794338062', instagram: 'https://www.instagram.com/uwizeyimana2811' }
   },
   {
     id: 4,
