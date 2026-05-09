@@ -246,7 +246,7 @@ export default function About() {
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="absolute inset-0 w-full h-full object-cover" 
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${isActive ? 'grayscale-0' : 'grayscale'}`} 
                     />
                     
                     {!isActive && (
